@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        .d1,.d2,.d3,.d4{width:200px;height:100px}
+        .d1{background-color: red}
+        .d2{background-color: pink}
+        .d3{background-color: #1b6d85}
+        .d4{background-color: #1b6}
+        .d22{ width:20px;height:20px;background-color: orange;margin-top:20px}
+        .d2:before{content:"";display:table}
+        .d3:before{content:"";display:table}
+        .d31,.d32,.d33{width:20px;height:20px;background-color:orange;margin-top:10px;float:left}
+        /*.container-fluid:after{content:" ";display:table;clear:both}*/
+    </style>
+</head>
+<body>
+    <div class="d1"></div>
+    <div class="d2">
+        <div class="d22"></div>
+    </div>
+    <div class="d3 container-fluid">
+        <div class="d31"></div>
+        <div class="d32"></div>
+        <div class="d33"></div>
+    </div>
+    <div class="d4"></div>
+</body>
+</html>
