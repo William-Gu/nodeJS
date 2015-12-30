@@ -1,9 +1,13 @@
 var express = require('express'),
 	fortune = require('./lib/fortune.js'),
 	formidable = require('formidable'),
-	credentials = require('./credentials.js');
+	favicon = require('serve-favicon'),
+	credentials = require('./credentials.js'),
+	requiresWaiver = require('./lib/requiresWaiver.js'),
+	cartValidation=require('./lib/cartValidation.js');
 
 var app = express();
+app.use(favicon(__dirname + '/public/favicon.ico'));
 
 // set up handlebars view engine
 var handlebars = require('express3-handlebars').create({
@@ -41,13 +45,12 @@ app.use(function(req, res, next){
 
 // set 'showTests' context property if the querystring contains test=1
 app.use(function(req, res, next){
-	res.locals.showTests = app.get('env') !== 'production' && 
+	res.locals.showTests = app.get('env') !== 'production' &&
 		req.query.test === '1';
 	next();
 });
 
-app.use(require('./lib/requiresWaiver.js'));
-var cartValidation=require('./lib/cartValidation.js');
+app.use(requiresWaiver);
 app.use(cartValidation.checkWaivers);
 app.use(cartValidation.checkGuestCounts);
 
@@ -87,9 +90,9 @@ app.get('/', function(req, res) {
 	res.cookie('age','18',{signed:true});
 });
 app.get('/about', function(req,res){
-	res.render('about', { 
+	res.render('about', {
 		fortune: fortune.getFortune(),
-		pageTestScript: '/qa/tests-about.js' 
+		pageTestScript: '/qa/tests-about.js'
 	} );
 });
 app.get('/tours/hood-river', function(req, res){
@@ -191,6 +194,6 @@ app.use(function(err, req, res, next){
 });
 
 app.listen(app.get('port'), function(){
-  console.log( 'Express started on http://localhost:' + 
+  console.log( 'Express started on http://localhost:' +
     app.get('port') + '; press Ctrl-C to terminate.' );
 });
