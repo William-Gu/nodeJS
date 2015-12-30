@@ -1,10 +1,9 @@
 var express = require('express'),
 	fortune = require('./lib/fortune.js'),
-	formidable = require('formidable');
+	formidable = require('formidable'),
+	credentials = require('./credentials.js');
 
 var app = express();
-
-var credentials = require('./credentials.js');
 
 // set up handlebars view engine
 var handlebars = require('express3-handlebars').create({
@@ -19,7 +18,6 @@ var handlebars = require('express3-handlebars').create({
 });
 app.engine('handlebars', handlebars.engine);
 app.set('view engine', 'handlebars');
-
 app.set('port', process.env.PORT || 3000);
 
 app.use(require('cookie-parser')(credentials.cookieSecret));
@@ -28,6 +26,7 @@ app.use(require('express-session')({
     saveUninitialized: false,
     secret: credentials.cookieSecret,
 }));
+
 app.use(express.static(__dirname + '/public'));
 app.use(require('body-parser')());
 
@@ -51,22 +50,17 @@ app.use(function(req, res, next){
 function getWeatherData(){
     return {
         locations: [
-            {
-                name: 'Portland',
+            {	name: 'Portland',
                 forecastUrl: 'http://www.wunderground.com/US/OR/Portland.html',
                 iconUrl: 'http://icons-ak.wxug.com/i/c/k/cloudy.gif',
                 weather: 'Overcast',
                 temp: '54.1 F (12.3 C)',
-            },
-            {
-                name: 'Bend',
+			},{	name: 'Bend',
                 forecastUrl: 'http://www.wunderground.com/US/OR/Bend.html',
                 iconUrl: 'http://icons-ak.wxug.com/i/c/k/partlycloudy.gif',
                 weather: 'Partly Cloudy',
                 temp: '55.0 F (12.8 C)',
-            },
-            {
-                name: 'Manzanita',
+            },{	name: 'Manzanita',
                 forecastUrl: 'http://www.wunderground.com/US/OR/Manzanita.html',
                 iconUrl: 'http://icons-ak.wxug.com/i/c/k/rain.gif',
                 weather: 'Light Rain',
@@ -82,9 +76,10 @@ app.use(function(req, res, next){
  	res.locals.partials.weatherContext = getWeatherData();
  	next();
 });
-
 app.get('/', function(req, res) {
 	res.render('home');
+	res.cookie('name','william',{signed:true,maxAge:1000000,httpOnly:true});
+	res.cookie('age','18',{signed:true});
 });
 app.get('/about', function(req,res){
 	res.render('about', { 
@@ -123,14 +118,10 @@ app.get('/newsletter', function(req, res){
 });
 
 // for now, we're mocking NewsletterSignup:
-function NewsletterSignup(){
-}
-NewsletterSignup.prototype.save = function(cb){
-	cb();
-};
+function NewsletterSignup(){}
+NewsletterSignup.prototype.save = function(cb){cb();};
 
 var VALID_EMAIL_REGEX = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)+$/;
-
 app.post('/newsletter', function(req, res){
 	var name = req.body.name || '', email = req.body.email || '';
 	// input validation
@@ -139,7 +130,7 @@ app.post('/newsletter', function(req, res){
 		req.session.flash = {
 			type: 'danger',
 			intro: 'Validation error!',
-			message: 'The email address you entered was  not valid.',
+			message: 'The email address you en<p>tered was  not valid.',
 		};
 		return res.redirect(303, '/newsletter/archive');
 	}
