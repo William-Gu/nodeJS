@@ -46,6 +46,11 @@ app.use(function(req, res, next){
 	next();
 });
 
+app.use(require('./lib/requiresWaiver.js'));
+var cartValidation=require('./lib/cartValidation.js');
+app.use(cartValidation.checkWaivers);
+app.use(cartValidation.checkGuestCounts);
+
 // mocked weather data
 function getWeatherData(){
     return {
