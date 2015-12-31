@@ -6,6 +6,9 @@ var express = require('express'),
 	requiresWaiver = require('./lib/requiresWaiver.js'),
 	cartValidation=require('./lib/cartValidation.js');
 
+//var emailService = require('./lib/email.js')(credentials);
+//emailService.send('gujun@liba.com','Hood river tours on sale today!','Get \`em while they\`re hot!')
+
 var app = express();
 app.use(favicon(__dirname + '/public/favicon.ico'));
 
@@ -179,6 +182,33 @@ app.post('/contest/vacation-photo/:year/:month', function(req, res){
         res.redirect(303, '/thank-you');
     });
 });
+app.post('/cart/checkout',function(req,res){
+	var cart=req.session.cart;
+	if(!cart){next(new Error('Cart does not exist.'))}
+	var name=req.body.name||'',emial=req.body.email||""
+	if(!email.match(VALID_EMAIL_REGEX)){
+		return  req.next(new Error('Invalid email address.'))
+	}
+	cart.number=Math.random().toString().replace(/^0\.0*/,'')
+	cart.billing={
+		name:name,
+		email:email
+	}
+	res.render('email/cart-thank-you',{layout:null,cart:cart},function(err,html){
+		if(err){console.log('error in email temlate')}
+		mailTransport.sendMail({
+			from:'"william":gujun@liba.com',
+			to:cart.billing.email,
+			subject:'Thank you for Book your trip with me.',
+			html:html,
+			generateTextFromHtml:true
+		},function(err){
+			if(err){console.error('Unable to send confirmation:'+err.stack)}
+		})
+	})
+	res.render('cart-thank-you',{cart:cart})
+})
+
 
 // 404 catch-all handler (middleware)
 app.use(function(req, res, next){
