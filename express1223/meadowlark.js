@@ -1,15 +1,18 @@
-var express = require('express'),
+var http = require('http'),
+	express = require('express'),
 	fortune = require('./lib/fortune.js'),
 	formidable = require('formidable'),
 	favicon = require('serve-favicon'),
+	fs = require('fs'),
 	credentials = require('./credentials.js'),
 	requiresWaiver = require('./lib/requiresWaiver.js'),
 	cartValidation=require('./lib/cartValidation.js');
 
 //var emailService = require('./lib/email.js')(credentials);
 //emailService.send('gujun@liba.com','Hood river tours on sale today!','Get \`em while they\`re hot!')
-
 var app = express();
+
+
 app.use(favicon(__dirname + '/public/favicon.ico'));
 
 // set up handlebars view engine
@@ -23,9 +26,51 @@ var handlebars = require('express3-handlebars').create({
         }
     }
 });
+
+switch(app.get('env')){
+	case 'development':
+		// compact, colorful dev logging
+		app.use(require('morgan')('dev'));
+		break;
+	case 'production':
+		// module 'express-logger' supports daily log rotation
+		app.use(require('express-logger')({ path: __dirname + '/log/requests.log'}));
+		break;
+};
+
 app.engine('handlebars', handlebars.engine);
 app.set('view engine', 'handlebars');
 app.set('port', process.env.PORT || 3000);
+
+app.use(function(req, res, next){
+	var domain = require('domain').create();
+	domain.on('error', function(err){
+		console.error('DOMAIN ERROR CAUGHT\n', err.stack);
+		try {
+			setTimeout(function(){
+				console.error('Failsafe shutdown.');
+				process.exit(1);
+			}, 5000);
+			var worker = require('cluster').worker;
+			if(worker) worker.disconnect();
+			server.close();
+
+			try {
+				next(err);
+			} catch(error){
+				console.error('Express error mechanism failed.\n', error.stack);
+				res.statusCode = 500;
+				res.setHeader('content-type', 'text/plain');
+				res.end('Server error.');
+			}
+		} catch(error){
+			console.error('Unable to send 500 response.\n', error.stack);
+		}
+	});
+	domain.add(req);
+	domain.add(res);
+	domain.run(next);
+});
 
 app.use(require('cookie-parser')(credentials.cookieSecret));
 app.use(require('express-session')({
@@ -171,17 +216,54 @@ app.get('/contest/vacation-photo', function(req, res){
     var now = new Date();
     res.render('contest/vacation-photo', { year: now.getFullYear(), month: now.getMonth() });
 });
+// make sure data directory exists
+var dataDir = __dirname + '/data';
+var vacationPhotoDir = dataDir + '/vacation-photo';
+if(!fs.existsSync(dataDir)) fs.mkdirSync(dataDir);
+if(!fs.existsSync(vacationPhotoDir)) fs.mkdirSync(vacationPhotoDir);
+function saveContestEntry(contestName, email, year, month, photoPath){
+	// TODO...this will come later
+}
 app.post('/contest/vacation-photo/:year/:month', function(req, res){
-    var form = new formidable.IncomingForm();
-    form.parse(req, function(err, fields, files){
-        if(err) return res.redirect(303, '/error');
-        console.log('received fields:');
-        console.log(fields);
-        console.log('received files:');
-        console.log(files);
-        res.redirect(303, '/thank-you');
-    });
+	var form = new formidable.IncomingForm();
+	form.parse(req, function(err, fields, files){
+		if(err) return res.redirect(303, '/error');
+		if(err) {
+			res.session.flash = {
+				type: 'danger',
+				intro: 'Oops!',
+				message: 'There was an error processing your submission. ' +
+				'Pelase try again.',
+			};
+			return res.redirect(303, '/contest/vacation-photo');
+		}
+		var photo = files.photo;
+		var dir = vacationPhotoDir + '/' + Date.now();
+		var path = dir + '/' + photo.name;
+		fs.mkdirSync(dir);
+
+		fs.renameSync(photo.path, dir + '/' + photo.name);
+		saveContestEntry('vacation-photo', fields.email,
+			req.params.year, req.params.month, path);
+		req.session.flash = {
+			type: 'success',
+			intro: 'Good luck!',
+			message: 'You have been entered into the contest.',
+		};
+		return res.redirect(303, '/contest/vacation-photo/entries');
+	});
 });
+//app.post('/contest/vacation-photo/:year/:month', function(req, res){
+//    var form = new formidable.IncomingForm();
+//    form.parse(req, function(err, fields, files){
+//        if(err) return res.redirect(303, '/error');
+//        console.log('received fields:');
+//        console.log(fields);
+//        console.log('received files:');
+//        console.log(files);
+//        res.redirect(303, '/thank-you');
+//    });
+//});
 app.post('/cart/checkout',function(req,res){
 	var cart=req.session.cart;
 	if(!cart){next(new Error('Cart does not exist.'))}
@@ -209,21 +291,39 @@ app.post('/cart/checkout',function(req,res){
 	res.render('cart-thank-you',{cart:cart})
 })
 
+app.get('/fail',function(req,res){
+	throw new Error('Nope!');
+});
 
 // 404 catch-all handler (middleware)
 app.use(function(req, res, next){
-	res.status(404);
-	res.render('404');
+	res.status(404).render('404');
 });
 
 // 500 error handler (middleware)
 app.use(function(err, req, res, next){
 	console.error(err.stack);
-	res.status(500);
-	res.render('500');
+	res.status(500).render('500');
 });
 
-app.listen(app.get('port'), function(){
-  console.log( 'Express started on http://localhost:' +
-    app.get('port') + '; press Ctrl-C to terminate.' );
-});
+//app.listen(app.get('port'), function(){
+//  console.log( 'Express started on http://localhost:' +
+//    app.get('port') + '; press Ctrl-C to terminate.' );
+//});
+
+function startServer() {
+	server = http.createServer(app).listen(app.get('port'), function(){
+		console.log(
+			'Express started in '+app.get('env')+
+			' mode on http://localhost:'+ app.get('port')+
+			'; press Ctrl-C to terminate.'
+		);
+	});
+}
+if(require.main === module){
+	// application run directly; start app server
+	startServer();
+} else {
+	// application imported as a module via "require": export function to create server
+	module.exports = startServer;
+}

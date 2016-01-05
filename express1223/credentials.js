@@ -3,5 +3,9 @@ module.exports={
     gmail:{
         use:"your mail username",
         password:"you mail password"
+    },
+    mongo:{
+        development:{connectionString:"mongodb://<dbuser>:<dbpassword>@ds039125.mongolab.com:39125/william_test"},
+        production:{connectionString:'mongodb://<dbuser>:<dbpassword>@ds039125.mongolab.com:39125/william_test'}
     }
 };
