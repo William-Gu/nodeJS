@@ -1,11 +1,11 @@
 module.exports={
-    cookieSecret:'把你的cookie秘要放在这里',
+    cookieSecret:'a689qi2P8Uhr2u4qYXYeNVyVMDU=',
     gmail:{
         use:"your mail username",
         password:"you mail password"
     },
     mongo:{
-        development:{connectionString:"mongodb://<dbuser>:<dbpassword>@ds039125.mongolab.com:39125/william_test"},
-        production:{connectionString:'mongodb://<dbuser>:<dbpassword>@ds039125.mongolab.com:39125/william_test'}
+        development:{connectionString:"mongodb://text-1:gujunhao@ds039125.mongolab.com:39125/william_test"},
+        production:{connectionString:'mongodb://text-1:gujunhao@ds039125.mongolab.com:39125/william_test'}
     }
 };

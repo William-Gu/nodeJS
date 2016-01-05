@@ -1,0 +1,2085 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/local/bin/node',
+1 verbose cli   '/usr/local/bin/npm',
+1 verbose cli   'install',
+1 verbose cli   '--save',
+1 verbose cli   'mongodb' ]
+2 info using npm@2.14.7
+3 info using node@v4.2.3
+4 verbose install initial load of /Users/William_Koo/Documents/nodeJS/express1223/package.json
+5 warn package.json meadowlarktravel@0.0.0 No README data
+6 warn package.json meadowlarktravel@0.0.0 license should be a valid SPDX license expression
+7 verbose installManyTop reading scoped package data from /Users/William_Koo/Documents/nodeJS/express1223/node_modules/body-parser/package.json
+8 verbose installManyTop reading scoped package data from /Users/William_Koo/Documents/nodeJS/express1223/node_modules/chai/package.json
+9 verbose installManyTop reading scoped package data from /Users/William_Koo/Documents/nodeJS/express1223/node_modules/connect/package.json
+10 verbose installManyTop reading scoped package data from /Users/William_Koo/Documents/nodeJS/express1223/node_modules/connect-mongo/package.json
+11 verbose installManyTop reading scoped package data from /Users/William_Koo/Documents/nodeJS/express1223/node_modules/cookie-parser/package.json
+12 verbose installManyTop reading scoped package data from /Users/William_Koo/Documents/nodeJS/express1223/node_modules/credentials/package.json
+13 verbose installManyTop reading scoped package data from /Users/William_Koo/Documents/nodeJS/express1223/node_modules/express-logger/package.json
+14 verbose installManyTop reading scoped package data from /Users/William_Koo/Documents/nodeJS/express1223/node_modules/express-session/package.json
+15 verbose installManyTop reading scoped package data from /Users/William_Koo/Documents/nodeJS/express1223/node_modules/express3-handlebars/package.json
+16 verbose installManyTop reading scoped package data from /Users/William_Koo/Documents/nodeJS/express1223/node_modules/grunt/package.json
+17 verbose installManyTop reading scoped package data from /Users/William_Koo/Documents/nodeJS/express1223/node_modules/grunt-cafe-mocha/package.json
+18 verbose installManyTop reading scoped package data from /Users/William_Koo/Documents/nodeJS/express1223/node_modules/grunt-cli/package.json
+19 verbose installManyTop reading scoped package data from /Users/William_Koo/Documents/nodeJS/express1223/node_modules/grunt-contrib-jshint/package.json
+20 verbose installManyTop reading scoped package data from /Users/William_Koo/Documents/nodeJS/express1223/node_modules/grunt-contrib-uglify/package.json
+21 verbose installManyTop reading scoped package data from /Users/William_Koo/Documents/nodeJS/express1223/node_modules/grunt-exec/package.json
+22 verbose installManyTop reading scoped package data from /Users/William_Koo/Documents/nodeJS/express1223/node_modules/loadtest/package.json
+23 verbose installManyTop reading scoped package data from /Users/William_Koo/Documents/nodeJS/express1223/node_modules/mongoose/package.json
+24 verbose installManyTop reading scoped package data from /Users/William_Koo/Documents/nodeJS/express1223/node_modules/morgan/package.json
+25 verbose installManyTop reading scoped package data from /Users/William_Koo/Documents/nodeJS/express1223/node_modules/nodemailer/package.json
+26 verbose installManyTop reading scoped package data from /Users/William_Koo/Documents/nodeJS/express1223/node_modules/serve-favicon/package.json
+27 verbose installManyTop reading scoped package data from /Users/William_Koo/Documents/nodeJS/express1223/node_modules/session-mongoose/package.json
+28 verbose installManyTop reading scoped package data from /Users/William_Koo/Documents/nodeJS/express1223/node_modules/zombie/package.json
+29 info package.json express3-handlebars@0.5.2 No license field.
+30 info package.json grunt-exec@0.4.6 No license field.
+31 info package.json grunt-cafe-mocha@0.1.13 No license field.
+32 info package.json grunt-cli@0.1.13 No license field.
+33 info package.json grunt@0.4.5 No license field.
+34 info package.json express-logger@0.0.3 No license field.
+35 info package.json nodemailer@0.7.1 No license field.
+36 info package.json session-mongoose@0.5.2 No license field.
+37 verbose readDependencies loading dependencies from /Users/William_Koo/Documents/nodeJS/express1223/package.json
+38 silly cache add args [ 'mongodb', null ]
+39 verbose cache add spec mongodb
+40 silly cache add parsed spec Result {
+40 silly cache add   raw: 'mongodb',
+40 silly cache add   scope: null,
+40 silly cache add   name: 'mongodb',
+40 silly cache add   rawSpec: '',
+40 silly cache add   spec: '*',
+40 silly cache add   type: 'range' }
+41 silly addNamed mongodb@*
+42 verbose addNamed "*" is a valid semver range for mongodb
+43 silly addNameRange { name: 'mongodb', range: '*', hasData: false }
+44 silly mapToRegistry name mongodb
+45 silly mapToRegistry using default registry
+46 silly mapToRegistry registry https://registry.npmjs.org/
+47 silly mapToRegistry uri https://registry.npmjs.org/mongodb
+48 verbose addNameRange registry:https://registry.npmjs.org/mongodb not in flight; fetching
+49 verbose request uri https://registry.npmjs.org/mongodb
+50 verbose request no auth needed
+51 info attempt registry request try #1 at 4:44:19 PM
+52 verbose request id 5a8a2a4e3fdb33d5
+53 verbose etag "BVES61VHH8KKBLJTG35WW3D4X"
+54 http request GET https://registry.npmjs.org/mongodb
+55 http 200 https://registry.npmjs.org/mongodb
+56 verbose headers { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+56 verbose headers   etag: '"BFMCEOP357KKCCDZM2YONZZ5Z"',
+56 verbose headers   'content-type': 'application/json',
+56 verbose headers   'cache-control': 'max-age=300',
+56 verbose headers   'content-length': '503771',
+56 verbose headers   'accept-ranges': 'bytes',
+56 verbose headers   date: 'Tue, 05 Jan 2016 08:44:21 GMT',
+56 verbose headers   via: '1.1 varnish',
+56 verbose headers   age: '253',
+56 verbose headers   connection: 'keep-alive',
+56 verbose headers   'x-served-by': 'cache-hkg6823-HKG',
+56 verbose headers   'x-cache': 'HIT',
+56 verbose headers   'x-cache-hits': '3',
+56 verbose headers   'x-timer': 'S1451983461.853834,VS0,VE0',
+56 verbose headers   vary: 'Accept' }
+57 silly get cb [ 200,
+57 silly get   { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+57 silly get     etag: '"BFMCEOP357KKCCDZM2YONZZ5Z"',
+57 silly get     'content-type': 'application/json',
+57 silly get     'cache-control': 'max-age=300',
+57 silly get     'content-length': '503771',
+57 silly get     'accept-ranges': 'bytes',
+57 silly get     date: 'Tue, 05 Jan 2016 08:44:21 GMT',
+57 silly get     via: '1.1 varnish',
+57 silly get     age: '253',
+57 silly get     connection: 'keep-alive',
+57 silly get     'x-served-by': 'cache-hkg6823-HKG',
+57 silly get     'x-cache': 'HIT',
+57 silly get     'x-cache-hits': '3',
+57 silly get     'x-timer': 'S1451983461.853834,VS0,VE0',
+57 silly get     vary: 'Accept' } ]
+58 verbose get saving mongodb to /Users/William_Koo/.npm/registry.npmjs.org/mongodb/.cache.json
+59 silly addNameRange number 2 { name: 'mongodb', range: '*', hasData: true }
+60 silly addNameRange versions [ 'mongodb',
+60 silly addNameRange   [ '0.9.4',
+60 silly addNameRange     '0.9.4-4',
+60 silly addNameRange     '0.9.3',
+60 silly addNameRange     '0.9.1',
+60 silly addNameRange     '0.9.2',
+60 silly addNameRange     '0.9.6-7',
+60 silly addNameRange     '0.9.6-8',
+60 silly addNameRange     '0.9.6-9',
+60 silly addNameRange     '0.9.6-10',
+60 silly addNameRange     '0.9.6-11',
+60 silly addNameRange     '0.9.6-12',
+60 silly addNameRange     '0.9.6-13',
+60 silly addNameRange     '0.9.6-14',
+60 silly addNameRange     '0.9.6-15',
+60 silly addNameRange     '0.9.6-16',
+60 silly addNameRange     '0.9.6-17',
+60 silly addNameRange     '0.9.6-18',
+60 silly addNameRange     '0.9.6-19',
+60 silly addNameRange     '0.9.6-20',
+60 silly addNameRange     '0.9.6-21',
+60 silly addNameRange     '0.9.6-22',
+60 silly addNameRange     '0.9.6-23',
+60 silly addNameRange     '0.9.7',
+60 silly addNameRange     '0.9.7-0',
+60 silly addNameRange     '0.9.7-1',
+60 silly addNameRange     '0.9.7-1.1',
+60 silly addNameRange     '0.9.7-1.2',
+60 silly addNameRange     '0.9.7-1.3',
+60 silly addNameRange     '0.9.7-1.4',
+60 silly addNameRange     '0.9.7-2',
+60 silly addNameRange     '0.9.7-2-1',
+60 silly addNameRange     '0.9.7-2-2',
+60 silly addNameRange     '0.9.7-2-3',
+60 silly addNameRange     '0.9.7-2-4',
+60 silly addNameRange     '0.9.7-2-5',
+60 silly addNameRange     '0.9.7-3',
+60 silly addNameRange     '0.9.7-3-1',
+60 silly addNameRange     '0.9.7-3-2',
+60 silly addNameRange     '0.9.7-3-3',
+60 silly addNameRange     '0.9.7-3-4',
+60 silly addNameRange     '0.9.7-3-5',
+60 silly addNameRange     '0.9.8',
+60 silly addNameRange     '0.9.8-1',
+60 silly addNameRange     '0.9.8-2',
+60 silly addNameRange     '0.9.8-3',
+60 silly addNameRange     '0.9.8-4',
+60 silly addNameRange     '0.9.8-5',
+60 silly addNameRange     '0.9.8-6',
+60 silly addNameRange     '0.9.8-7',
+60 silly addNameRange     '0.9.9',
+60 silly addNameRange     '0.9.9-1',
+60 silly addNameRange     '0.9.9-2',
+60 silly addNameRange     '0.9.9-3',
+60 silly addNameRange     '0.9.9-4',
+60 silly addNameRange     '0.9.9-5',
+60 silly addNameRange     '0.9.9-6',
+60 silly addNameRange     '0.9.9-7',
+60 silly addNameRange     '0.9.9-8',
+60 silly addNameRange     '1.0.0',
+60 silly addNameRange     '1.0.1',
+60 silly addNameRange     '1.0.2',
+60 silly addNameRange     '1.1.0-beta',
+60 silly addNameRange     '1.1.0',
+60 silly addNameRange     '1.1.1',
+60 silly addNameRange     '1.1.2',
+60 silly addNameRange     '1.1.3',
+60 silly addNameRange     '1.1.4',
+60 silly addNameRange     '1.1.5',
+60 silly addNameRange     '1.1.6',
+60 silly addNameRange     '1.1.7',
+60 silly addNameRange     '1.1.8',
+60 silly addNameRange     '1.1.9',
+60 silly addNameRange     '1.1.10',
+60 silly addNameRange     '1.1.11',
+60 silly addNameRange     '1.2.0',
+60 silly addNameRange     '1.2.1',
+60 silly addNameRange     '1.2.2',
+60 silly addNameRange     '1.2.3',
+60 silly addNameRange     '1.2.4',
+60 silly addNameRange     '1.2.5',
+60 silly addNameRange     '1.2.6',
+60 silly addNameRange     '1.2.7',
+60 silly addNameRange     '1.2.8',
+60 silly addNameRange     '1.2.9',
+60 silly addNameRange     '1.2.10',
+60 silly addNameRange     '1.2.11',
+60 silly addNameRange     '1.2.12',
+60 silly addNameRange     '1.2.13',
+60 silly addNameRange     '1.2.14',
+60 silly addNameRange     '1.3.0',
+60 silly addNameRange     '1.3.1',
+60 silly addNameRange     '1.3.2',
+60 silly addNameRange     '1.3.3',
+60 silly addNameRange     '1.3.4',
+60 silly addNameRange     '1.3.5',
+60 silly addNameRange     '1.3.6',
+60 silly addNameRange     '1.3.7',
+60 silly addNameRange     '1.3.8',
+60 silly addNameRange     '1.3.9',
+60 silly addNameRange     '1.3.10',
+60 silly addNameRange     '1.3.11',
+60 silly addNameRange     '1.3.12',
+60 silly addNameRange     '1.3.14',
+60 silly addNameRange     '1.3.15',
+60 silly addNameRange     '1.3.17',
+60 silly addNameRange     '1.3.18',
+60 silly addNameRange     '1.3.19',
+60 silly addNameRange     '1.4.0-rc2',
+60 silly addNameRange     '1.3.20',
+60 silly addNameRange     '1.4.0-rc3',
+60 silly addNameRange     '1.3.21',
+60 silly addNameRange     '1.3.22',
+60 silly addNameRange     '1.3.23',
+60 silly addNameRange     '1.4.0-rc4',
+60 silly addNameRange     '1.4.0-rc5',
+60 silly addNameRange     '1.4.0-rc6',
+60 silly addNameRange     '1.4.0-rc7',
+60 silly addNameRange     '1.4.0-rc8',
+60 silly addNameRange     '1.4.0-rc9',
+60 silly addNameRange     '1.4.0-rc10',
+60 silly addNameRange     '1.4.0',
+60 silly addNameRange     '1.4.1',
+60 silly addNameRange     '1.4.2',
+60 silly addNameRange     '1.4.3',
+60 silly addNameRange     '1.4.4',
+60 silly addNameRange     '1.4.5',
+60 silly addNameRange     '1.4.6',
+60 silly addNameRange     '1.4.7',
+60 silly addNameRange     '1.4.8',
+60 silly addNameRange     '1.4.9',
+60 silly addNameRange     '1.4.10',
+60 silly addNameRange     '2.0.0-alpha1',
+60 silly addNameRange     '1.4.11',
+60 silly addNameRange     '1.4.12',
+60 silly addNameRange     '1.4.14',
+60 silly addNameRange     '1.4.15',
+60 silly addNameRange     '1.4.16',
+60 silly addNameRange     '1.4.17',
+60 silly addNameRange     '2.0.0-alpha2',
+60 silly addNameRange     '1.4.18',
+60 silly addNameRange     '2.0.0',
+60 silly addNameRange     '2.0.1',
+60 silly addNameRange     '2.0.2',
+60 silly addNameRange     '1.4.19',
+60 silly addNameRange     '2.0.3',
+60 silly addNameRange     '2.0.4',
+60 silly addNameRange     '2.0.5',
+60 silly addNameRange     '2.0.6',
+60 silly addNameRange     '1.4.20',
+60 silly addNameRange     '1.4.22',
+60 silly addNameRange     '2.0.7',
+60 silly addNameRange     '2.0.8',
+60 silly addNameRange     '2.0.9',
+60 silly addNameRange     '1.4.23',
+60 silly addNameRange     '2.0.10',
+60 silly addNameRange     '1.4.24',
+60 silly addNameRange     '2.0.11',
+60 silly addNameRange     '1.4.25',
+60 silly addNameRange     '2.0.12',
+60 silly addNameRange     '1.4.26',
+60 silly addNameRange     '1.4.27',
+60 silly addNameRange     '1.4.28',
+60 silly addNameRange     '2.0.13',
+60 silly addNameRange     '2.0.14',
+60 silly addNameRange     '1.4.29',
+60 silly addNameRange     '2.0.15',
+60 silly addNameRange     '1.4.30',
+60 silly addNameRange     '2.0.16',
+60 silly addNameRange     '1.4.31',
+60 silly addNameRange     '2.0.17',
+60 silly addNameRange     '1.4.32',
+60 silly addNameRange     '2.0.18',
+60 silly addNameRange     '2.0.19',
+60 silly addNameRange     '1.4.33',
+60 silly addNameRange     '2.0.20',
+60 silly addNameRange     '2.0.21',
+60 silly addNameRange     '1.4.34',
+60 silly addNameRange     '2.0.22',
+60 silly addNameRange     '2.0.23',
+60 silly addNameRange     '1.4.35',
+60 silly addNameRange     '2.0.24',
+60 silly addNameRange     '2.0.25',
+60 silly addNameRange     '2.0.26',
+60 silly addNameRange     '2.0.27',
+60 silly addNameRange     '2.0.28',
+60 silly addNameRange     '2.0.29',
+60 silly addNameRange     '1.4.36',
+60 silly addNameRange     '2.0.30',
+60 silly addNameRange     '1.4.37',
+60 silly addNameRange     '2.0.31',
+60 silly addNameRange     '1.4.38',
+60 silly addNameRange     '2.0.32',
+60 silly addNameRange     '2.0.33',
+60 silly addNameRange     '2.1.0-alpha',
+60 silly addNameRange     '2.0.34',
+60 silly addNameRange     '2.0.35',
+60 silly addNameRange     '2.0.36',
+60 silly addNameRange     '2.0.37',
+60 silly addNameRange     '2.0.38',
+60 silly addNameRange     '2.0.39',
+60 silly addNameRange     '1.4.39',
+60 silly addNameRange     '2.0.40',
+60 silly addNameRange     '2.0.41',
+60 silly addNameRange     '2.0.42',
+60 silly addNameRange     '2.0.43',
+60 silly addNameRange     '2.0.44',
+60 silly addNameRange     '2.0.45',
+60 silly addNameRange     '2.0.46',
+60 silly addNameRange     '2.0.47',
+60 silly addNameRange     '2.0.48',
+60 silly addNameRange     '2.1.0-rc1',
+60 silly addNameRange     '2.0.49',
+60 silly addNameRange     '2.0.50',
+60 silly addNameRange     '2.1.0',
+60 silly addNameRange     '2.0.51',
+60 silly addNameRange     '2.1.1',
+60 silly addNameRange     '2.0.52',
+60 silly addNameRange     '2.0.53',
+60 silly addNameRange     '2.1.2',
+60 silly addNameRange     '2.1.3',
+60 silly addNameRange     '2.0.54',
+60 silly addNameRange     '2.0.55' ] ]
+61 silly addNamed mongodb@2.1.3
+62 verbose addNamed "2.1.3" is a plain semver version for mongodb
+63 silly cache afterAdd mongodb@2.1.3
+64 verbose afterAdd /Users/William_Koo/.npm/mongodb/2.1.3/package/package.json not in flight; writing
+65 verbose afterAdd /Users/William_Koo/.npm/mongodb/2.1.3/package/package.json written
+66 silly install resolved [ { name: 'mongodb',
+66 silly install resolved     version: '2.1.3',
+66 silly install resolved     description: 'MongoDB legacy driver emulation layer on top of mongodb-core',
+66 silly install resolved     main: 'index.js',
+66 silly install resolved     repository:
+66 silly install resolved      { type: 'git',
+66 silly install resolved        url: 'git+ssh://git@github.com/mongodb/node-mongodb-native.git' },
+66 silly install resolved     keywords: [ 'mongodb', 'driver', 'legacy' ],
+66 silly install resolved     dependencies:
+66 silly install resolved      { 'mongodb-core': '1.2.31',
+66 silly install resolved        'readable-stream': '1.0.31',
+66 silly install resolved        'es6-promise': '3.0.2' },
+66 silly install resolved     devDependencies:
+66 silly install resolved      { integra: '0.1.8',
+66 silly install resolved        optimist: '0.6.1',
+66 silly install resolved        bson: '~0.4',
+66 silly install resolved        jsdoc: '3.3.0-beta3',
+66 silly install resolved        semver: '4.1.0',
+66 silly install resolved        rimraf: '2.2.6',
+66 silly install resolved        gleak: '0.5.0',
+66 silly install resolved        'mongodb-version-manager': '^0.8.10',
+66 silly install resolved        'mongodb-extended-json': '1.3.0',
+66 silly install resolved        'mongodb-topology-manager': '1.0.x',
+66 silly install resolved        co: '4.5.4',
+66 silly install resolved        bluebird: '2.9.27' },
+66 silly install resolved     author: { name: 'Christian Kvalheim' },
+66 silly install resolved     license: 'Apache-2.0',
+66 silly install resolved     bugs: { url: 'https://github.com/mongodb/node-mongodb-native/issues' },
+66 silly install resolved     scripts: { test: 'node test/runner.js -t functional' },
+66 silly install resolved     homepage: 'https://github.com/mongodb/node-mongodb-native',
+66 silly install resolved     gitHead: 'a38d2e4f6df0794466a66c41b46593ad84746dcd',
+66 silly install resolved     _id: 'mongodb@2.1.3',
+66 silly install resolved     _shasum: '8c1eb443e77ac2ea10e281307b1692efcc2187b5',
+66 silly install resolved     _from: 'mongodb@*',
+66 silly install resolved     _npmVersion: '2.14.12',
+66 silly install resolved     _nodeVersion: '4.2.4',
+66 silly install resolved     _npmUser: { name: 'christkv', email: 'christkv@gmail.com' },
+66 silly install resolved     maintainers: [ [Object] ],
+66 silly install resolved     dist:
+66 silly install resolved      { shasum: '8c1eb443e77ac2ea10e281307b1692efcc2187b5',
+66 silly install resolved        tarball: 'http://registry.npmjs.org/mongodb/-/mongodb-2.1.3.tgz' },
+66 silly install resolved     directories: {},
+66 silly install resolved     _resolved: 'https://registry.npmjs.org/mongodb/-/mongodb-2.1.3.tgz',
+66 silly install resolved     readme: 'ERROR: No README data found!' } ]
+67 info install mongodb@2.1.3 into /Users/William_Koo/Documents/nodeJS/express1223
+68 info installOne mongodb@2.1.3
+69 verbose installOne of mongodb to /Users/William_Koo/Documents/nodeJS/express1223 not in flight; installing
+70 verbose lock using /Users/William_Koo/.npm/_locks/mongodb-2bf219e1359e7e2e.lock for /Users/William_Koo/Documents/nodeJS/express1223/node_modules/mongodb
+71 silly install write writing mongodb 2.1.3 to /Users/William_Koo/Documents/nodeJS/express1223/node_modules/mongodb
+72 verbose unbuild node_modules/mongodb
+73 silly gentlyRm /Users/William_Koo/Documents/nodeJS/express1223/node_modules/mongodb is being purged from base /Users/William_Koo/Documents/nodeJS/express1223
+74 verbose gentlyRm don't care about contents; nuking /Users/William_Koo/Documents/nodeJS/express1223/node_modules/mongodb
+75 verbose tar unpack /Users/William_Koo/.npm/mongodb/2.1.3/package.tgz
+76 verbose tar unpacking to /Users/William_Koo/Documents/nodeJS/express1223/node_modules/mongodb
+77 silly gentlyRm /Users/William_Koo/Documents/nodeJS/express1223/node_modules/mongodb is being purged
+78 verbose gentlyRm don't care about contents; nuking /Users/William_Koo/Documents/nodeJS/express1223/node_modules/mongodb
+79 silly gunzTarPerm modes [ '755', '644' ]
+80 silly gunzTarPerm extractEntry package.json
+81 silly gunzTarPerm extractEntry README.md
+82 silly gunzTarPerm extractEntry LICENSE
+83 silly gunzTarPerm extractEntry index.js
+84 silly gunzTarPerm extractEntry mongolabs.js
+85 silly gunzTarPerm extractEntry test.js
+86 silly gunzTarPerm extractEntry t.js
+87 silly gunzTarPerm modified mode [ 't.js', 436, 420 ]
+88 silly gunzTarPerm extractEntry lib/admin.js
+89 silly gunzTarPerm extractEntry lib/command_cursor.js
+90 silly gunzTarPerm extractEntry lib/cursor.js
+91 silly gunzTarPerm extractEntry lib/db.js
+92 silly gunzTarPerm extractEntry lib/collection.js
+93 silly gunzTarPerm extractEntry lib/aggregation_cursor.js
+94 silly gunzTarPerm extractEntry lib/metadata.js
+95 silly gunzTarPerm extractEntry lib/mongo_client.js
+96 silly gunzTarPerm extractEntry lib/mongos.js
+97 silly gunzTarPerm extractEntry lib/read_preference.js
+98 silly gunzTarPerm extractEntry lib/url_parser.js
+99 silly gunzTarPerm extractEntry lib/replset.js
+100 silly gunzTarPerm extractEntry lib/apm.js
+101 silly gunzTarPerm extractEntry lib/server.js
+102 silly gunzTarPerm extractEntry lib/topology_base.js
+103 silly gunzTarPerm extractEntry lib/utils.js
+104 silly gunzTarPerm extractEntry lib/gridfs/chunk.js
+105 silly gunzTarPerm extractEntry lib/gridfs/grid_store.js
+106 silly gunzTarPerm extractEntry lib/bulk/common.js
+107 silly gunzTarPerm extractEntry lib/bulk/ordered.js
+108 silly gunzTarPerm extractEntry lib/bulk/unordered.js
+109 silly gunzTarPerm extractEntry lib/gridfs-stream/download.js
+110 silly gunzTarPerm extractEntry lib/gridfs-stream/index.js
+111 silly gunzTarPerm extractEntry lib/gridfs-stream/upload.js
+112 silly gunzTarPerm extractEntry Makefile
+113 silly gunzTarPerm extractEntry HISTORY.md
+114 silly gunzTarPerm extractEntry conf.json
+115 silly gunzTarPerm extractEntry test_boot/connect.js
+116 silly gunzTarPerm extractEntry test_boot/boot.sh
+117 silly gunzTarPerm extractEntry test_boot/ca.pem
+118 silly gunzTarPerm extractEntry test_boot/client.pem
+119 silly gunzTarPerm extractEntry test_boot/client_password.pem
+120 silly gunzTarPerm extractEntry test_boot/data/collection-0-757073248613337118.wt
+121 silly gunzTarPerm extractEntry test_boot/data/WiredTiger
+122 silly gunzTarPerm extractEntry test_boot/data/WiredTiger.turtle
+123 silly gunzTarPerm extractEntry test_boot/data/WiredTiger.wt
+124 silly gunzTarPerm extractEntry test_boot/data/WiredTigerLAS.wt
+125 silly gunzTarPerm extractEntry test_boot/data/_mdb_catalog.wt
+126 silly gunzTarPerm extractEntry test_boot/data/WiredTiger.lock
+127 silly gunzTarPerm extractEntry test_boot/data/diagnostic.data/metrics.2015-10-07T14-50-41Z-00000
+128 silly gunzTarPerm extractEntry test_boot/data/diagnostic.data/metrics.2015-10-07T14-44-37Z-00000
+129 silly gunzTarPerm extractEntry test_boot/data/diagnostic.data/metrics.2015-10-07T14-46-31Z-00000
+130 silly gunzTarPerm extractEntry test_boot/data/diagnostic.data/metrics.2015-10-07T14-47-25Z-00000
+131 silly gunzTarPerm extractEntry test_boot/data/diagnostic.data/metrics.2015-10-07T14-49-07Z-00000
+132 silly gunzTarPerm extractEntry test_boot/data/diagnostic.data/metrics.2015-10-07T14-45-15Z-00000
+133 silly gunzTarPerm extractEntry test_boot/data/diagnostic.data/metrics.2015-10-07T14-50-53Z-00000
+134 silly gunzTarPerm extractEntry test_boot/data/diagnostic.data/metrics.2015-10-07T14-52-31Z-00000
+135 silly gunzTarPerm extractEntry test_boot/data/diagnostic.data/metrics.2015-10-07T14-54-53Z-00000
+136 silly gunzTarPerm extractEntry test_boot/data/diagnostic.data/metrics.2015-10-07T14-55-09Z-00000
+137 silly gunzTarPerm extractEntry test_boot/data/diagnostic.data/metrics.2015-10-07T14-55-38Z-00000
+138 silly gunzTarPerm extractEntry test_boot/data/index-1-757073248613337118.wt
+139 silly gunzTarPerm extractEntry test_boot/data/mongod.lock
+140 silly gunzTarPerm extractEntry test_boot/data/sizeStorer.wt
+141 silly gunzTarPerm extractEntry test_boot/data/storage.bson
+142 silly gunzTarPerm extractEntry test_boot/server_password.pem
+143 verbose write writing to /Users/William_Koo/Documents/nodeJS/express1223/node_modules/mongodb/package.json
+144 info preinstall mongodb@2.1.3
+145 verbose readDependencies loading dependencies from /Users/William_Koo/Documents/nodeJS/express1223/node_modules/mongodb/package.json
+146 silly prepareForInstallMany adding mongodb-core@1.2.31 from mongodb dependencies
+147 silly prepareForInstallMany adding readable-stream@1.0.31 from mongodb dependencies
+148 silly prepareForInstallMany adding es6-promise@3.0.2 from mongodb dependencies
+149 verbose readDependencies loading dependencies from /Users/William_Koo/Documents/nodeJS/express1223/node_modules/mongodb/package.json
+150 silly cache add args [ 'mongodb-core@1.2.31', null ]
+151 verbose cache add spec mongodb-core@1.2.31
+152 silly cache add args [ 'readable-stream@1.0.31', null ]
+153 verbose cache add spec readable-stream@1.0.31
+154 silly cache add parsed spec Result {
+154 silly cache add   raw: 'mongodb-core@1.2.31',
+154 silly cache add   scope: null,
+154 silly cache add   name: 'mongodb-core',
+154 silly cache add   rawSpec: '1.2.31',
+154 silly cache add   spec: '1.2.31',
+154 silly cache add   type: 'version' }
+155 silly addNamed mongodb-core@1.2.31
+156 verbose addNamed "1.2.31" is a plain semver version for mongodb-core
+157 silly mapToRegistry name mongodb-core
+158 silly mapToRegistry using default registry
+159 silly mapToRegistry registry https://registry.npmjs.org/
+160 silly mapToRegistry uri https://registry.npmjs.org/mongodb-core
+161 verbose addNameVersion registry:https://registry.npmjs.org/mongodb-core not in flight; fetching
+162 silly cache add parsed spec Result {
+162 silly cache add   raw: 'readable-stream@1.0.31',
+162 silly cache add   scope: null,
+162 silly cache add   name: 'readable-stream',
+162 silly cache add   rawSpec: '1.0.31',
+162 silly cache add   spec: '1.0.31',
+162 silly cache add   type: 'version' }
+163 silly addNamed readable-stream@1.0.31
+164 verbose addNamed "1.0.31" is a plain semver version for readable-stream
+165 silly mapToRegistry name readable-stream
+166 silly mapToRegistry using default registry
+167 silly mapToRegistry registry https://registry.npmjs.org/
+168 silly mapToRegistry uri https://registry.npmjs.org/readable-stream
+169 verbose addNameVersion registry:https://registry.npmjs.org/readable-stream not in flight; fetching
+170 silly cache add args [ 'es6-promise@3.0.2', null ]
+171 verbose cache add spec es6-promise@3.0.2
+172 silly cache add parsed spec Result {
+172 silly cache add   raw: 'es6-promise@3.0.2',
+172 silly cache add   scope: null,
+172 silly cache add   name: 'es6-promise',
+172 silly cache add   rawSpec: '3.0.2',
+172 silly cache add   spec: '3.0.2',
+172 silly cache add   type: 'version' }
+173 silly addNamed es6-promise@3.0.2
+174 verbose addNamed "3.0.2" is a plain semver version for es6-promise
+175 silly mapToRegistry name es6-promise
+176 silly mapToRegistry using default registry
+177 silly mapToRegistry registry https://registry.npmjs.org/
+178 silly mapToRegistry uri https://registry.npmjs.org/es6-promise
+179 verbose addNameVersion registry:https://registry.npmjs.org/es6-promise not in flight; fetching
+180 verbose request uri https://registry.npmjs.org/es6-promise
+181 verbose request no auth needed
+182 info attempt registry request try #1 at 4:44:22 PM
+183 verbose etag "52J7BJ2JZHN1LGBEELX9IAILJ"
+184 http request GET https://registry.npmjs.org/es6-promise
+185 verbose request uri https://registry.npmjs.org/readable-stream
+186 verbose request no auth needed
+187 info attempt registry request try #1 at 4:44:22 PM
+188 verbose etag "3EOIL5JTL47JFABLY3LGTYV7"
+189 http request GET https://registry.npmjs.org/readable-stream
+190 verbose request uri https://registry.npmjs.org/mongodb-core
+191 verbose request no auth needed
+192 info attempt registry request try #1 at 4:44:22 PM
+193 verbose etag "3SVNLCBMOP8RLLZJ97WSYTW9X"
+194 http request GET https://registry.npmjs.org/mongodb-core
+195 http 304 https://registry.npmjs.org/es6-promise
+196 verbose headers { date: 'Tue, 05 Jan 2016 08:44:23 GMT',
+196 verbose headers   via: '1.1 varnish',
+196 verbose headers   'cache-control': 'max-age=300',
+196 verbose headers   etag: '"52J7BJ2JZHN1LGBEELX9IAILJ"',
+196 verbose headers   age: '47',
+196 verbose headers   connection: 'keep-alive',
+196 verbose headers   'x-served-by': 'cache-hkg6825-HKG',
+196 verbose headers   'x-cache': 'HIT',
+196 verbose headers   'x-cache-hits': '1',
+196 verbose headers   'x-timer': 'S1451983463.637205,VS0,VE0',
+196 verbose headers   vary: 'Accept' }
+197 silly get cb [ 304,
+197 silly get   { date: 'Tue, 05 Jan 2016 08:44:23 GMT',
+197 silly get     via: '1.1 varnish',
+197 silly get     'cache-control': 'max-age=300',
+197 silly get     etag: '"52J7BJ2JZHN1LGBEELX9IAILJ"',
+197 silly get     age: '47',
+197 silly get     connection: 'keep-alive',
+197 silly get     'x-served-by': 'cache-hkg6825-HKG',
+197 silly get     'x-cache': 'HIT',
+197 silly get     'x-cache-hits': '1',
+197 silly get     'x-timer': 'S1451983463.637205,VS0,VE0',
+197 silly get     vary: 'Accept' } ]
+198 verbose etag https://registry.npmjs.org/es6-promise from cache
+199 verbose get saving es6-promise to /Users/William_Koo/.npm/registry.npmjs.org/es6-promise/.cache.json
+200 silly cache afterAdd es6-promise@3.0.2
+201 verbose afterAdd /Users/William_Koo/.npm/es6-promise/3.0.2/package/package.json not in flight; writing
+202 http 304 https://registry.npmjs.org/mongodb-core
+203 verbose headers { date: 'Tue, 05 Jan 2016 08:44:23 GMT',
+203 verbose headers   via: '1.1 varnish',
+203 verbose headers   'cache-control': 'max-age=300',
+203 verbose headers   etag: '"3SVNLCBMOP8RLLZJ97WSYTW9X"',
+203 verbose headers   age: '251',
+203 verbose headers   connection: 'keep-alive',
+203 verbose headers   'x-served-by': 'cache-hkg6825-HKG',
+203 verbose headers   'x-cache': 'HIT',
+203 verbose headers   'x-cache-hits': '3',
+203 verbose headers   'x-timer': 'S1451983463.647797,VS0,VE0',
+203 verbose headers   vary: 'Accept' }
+204 silly get cb [ 304,
+204 silly get   { date: 'Tue, 05 Jan 2016 08:44:23 GMT',
+204 silly get     via: '1.1 varnish',
+204 silly get     'cache-control': 'max-age=300',
+204 silly get     etag: '"3SVNLCBMOP8RLLZJ97WSYTW9X"',
+204 silly get     age: '251',
+204 silly get     connection: 'keep-alive',
+204 silly get     'x-served-by': 'cache-hkg6825-HKG',
+204 silly get     'x-cache': 'HIT',
+204 silly get     'x-cache-hits': '3',
+204 silly get     'x-timer': 'S1451983463.647797,VS0,VE0',
+204 silly get     vary: 'Accept' } ]
+205 verbose etag https://registry.npmjs.org/mongodb-core from cache
+206 verbose get saving mongodb-core to /Users/William_Koo/.npm/registry.npmjs.org/mongodb-core/.cache.json
+207 http 304 https://registry.npmjs.org/readable-stream
+208 verbose headers { date: 'Tue, 05 Jan 2016 08:44:23 GMT',
+208 verbose headers   via: '1.1 varnish',
+208 verbose headers   'cache-control': 'max-age=300',
+208 verbose headers   etag: '"3EOIL5JTL47JFABLY3LGTYV7"',
+208 verbose headers   age: '300',
+208 verbose headers   connection: 'keep-alive',
+208 verbose headers   'x-served-by': 'cache-hkg6822-HKG',
+208 verbose headers   'x-cache': 'HIT',
+208 verbose headers   'x-cache-hits': '1',
+208 verbose headers   'x-timer': 'S1451983463.646829,VS0,VE0',
+208 verbose headers   vary: 'Accept' }
+209 silly get cb [ 304,
+209 silly get   { date: 'Tue, 05 Jan 2016 08:44:23 GMT',
+209 silly get     via: '1.1 varnish',
+209 silly get     'cache-control': 'max-age=300',
+209 silly get     etag: '"3EOIL5JTL47JFABLY3LGTYV7"',
+209 silly get     age: '300',
+209 silly get     connection: 'keep-alive',
+209 silly get     'x-served-by': 'cache-hkg6822-HKG',
+209 silly get     'x-cache': 'HIT',
+209 silly get     'x-cache-hits': '1',
+209 silly get     'x-timer': 'S1451983463.646829,VS0,VE0',
+209 silly get     vary: 'Accept' } ]
+210 verbose etag https://registry.npmjs.org/readable-stream from cache
+211 verbose get saving readable-stream to /Users/William_Koo/.npm/registry.npmjs.org/readable-stream/.cache.json
+212 verbose afterAdd /Users/William_Koo/.npm/es6-promise/3.0.2/package/package.json written
+213 silly cache afterAdd mongodb-core@1.2.31
+214 verbose afterAdd /Users/William_Koo/.npm/mongodb-core/1.2.31/package/package.json not in flight; writing
+215 silly cache afterAdd readable-stream@1.0.31
+216 verbose afterAdd /Users/William_Koo/.npm/readable-stream/1.0.31/package/package.json not in flight; writing
+217 verbose afterAdd /Users/William_Koo/.npm/mongodb-core/1.2.31/package/package.json written
+218 verbose afterAdd /Users/William_Koo/.npm/readable-stream/1.0.31/package/package.json written
+219 silly install resolved [ { name: 'es6-promise',
+219 silly install resolved     namespace: 'es6-promise',
+219 silly install resolved     version: '3.0.2',
+219 silly install resolved     description: 'A lightweight library that provides tools for organizing asynchronous code',
+219 silly install resolved     main: 'dist/es6-promise.js',
+219 silly install resolved     directories: { lib: 'lib' },
+219 silly install resolved     files: [ 'dist', 'lib', '!dist/test' ],
+219 silly install resolved     devDependencies:
+219 silly install resolved      { bower: '^1.3.9',
+219 silly install resolved        brfs: '0.0.8',
+219 silly install resolved        'broccoli-es3-safe-recast': '0.0.8',
+219 silly install resolved        'broccoli-es6-module-transpiler': '^0.5.0',
+219 silly install resolved        'broccoli-jshint': '^0.5.1',
+219 silly install resolved        'broccoli-merge-trees': '^0.1.4',
+219 silly install resolved        'broccoli-replace': '^0.2.0',
+219 silly install resolved        'broccoli-stew': '0.0.6',
+219 silly install resolved        'broccoli-uglify-js': '^0.1.3',
+219 silly install resolved        'broccoli-watchify': '^0.2.0',
+219 silly install resolved        'ember-cli': '0.2.3',
+219 silly install resolved        'ember-publisher': '0.0.7',
+219 silly install resolved        'git-repo-version': '0.0.2',
+219 silly install resolved        json3: '^3.3.2',
+219 silly install resolved        minimatch: '^2.0.1',
+219 silly install resolved        mocha: '^1.20.1',
+219 silly install resolved        'promises-aplus-tests-phantom': '^2.1.0-revise',
+219 silly install resolved        'release-it': '0.0.10' },
+219 silly install resolved     scripts:
+219 silly install resolved      { build: 'ember build',
+219 silly install resolved        start: 'ember s',
+219 silly install resolved        test: 'ember test',
+219 silly install resolved        'test:server': 'ember test --server',
+219 silly install resolved        'test:node': 'ember build && mocha ./dist/test/browserify',
+219 silly install resolved        lint: 'jshint lib',
+219 silly install resolved        prepublish: 'ember build --environment production',
+219 silly install resolved        'dry-run-release': 'ember build --environment production && release-it --dry-run --non-interactive' },
+219 silly install resolved     repository:
+219 silly install resolved      { type: 'git',
+219 silly install resolved        url: 'git://github.com/jakearchibald/ES6-Promises.git' },
+219 silly install resolved     bugs: { url: 'https://github.com/jakearchibald/ES6-Promises/issues' },
+219 silly install resolved     browser: { vertx: false },
+219 silly install resolved     keywords: [ 'promises', 'futures' ],
+219 silly install resolved     author:
+219 silly install resolved      { name: 'Yehuda Katz, Tom Dale, Stefan Penner and contributors',
+219 silly install resolved        url: 'Conversion to ES6 API by Jake Archibald' },
+219 silly install resolved     license: 'MIT',
+219 silly install resolved     spm: { main: 'dist/es6-promise.js' },
+219 silly install resolved     gitHead: '6c49ef79609737bac2b496d508806a3d5e37303e',
+219 silly install resolved     homepage: 'https://github.com/jakearchibald/ES6-Promises#readme',
+219 silly install resolved     _id: 'es6-promise@3.0.2',
+219 silly install resolved     _shasum: '010d5858423a5f118979665f46486a95c6ee2bb6',
+219 silly install resolved     _from: 'es6-promise@3.0.2',
+219 silly install resolved     _npmVersion: '2.13.4',
+219 silly install resolved     _nodeVersion: '2.2.1',
+219 silly install resolved     _npmUser: { name: 'stefanpenner', email: 'stefan.penner@gmail.com' },
+219 silly install resolved     maintainers: [ [Object], [Object] ],
+219 silly install resolved     dist:
+219 silly install resolved      { shasum: '010d5858423a5f118979665f46486a95c6ee2bb6',
+219 silly install resolved        tarball: 'http://registry.npmjs.org/es6-promise/-/es6-promise-3.0.2.tgz' },
+219 silly install resolved     _resolved: 'https://registry.npmjs.org/es6-promise/-/es6-promise-3.0.2.tgz',
+219 silly install resolved     readme: 'ERROR: No README data found!' },
+219 silly install resolved   { name: 'mongodb-core',
+219 silly install resolved     version: '1.2.31',
+219 silly install resolved     description: 'Core MongoDB driver functionality, no bells and whistles and meant for integration not end applications',
+219 silly install resolved     main: 'index.js',
+219 silly install resolved     scripts: { test: 'node test/runner.js -t functional' },
+219 silly install resolved     repository:
+219 silly install resolved      { type: 'git',
+219 silly install resolved        url: 'git://github.com/christkv/mongodb-core.git' },
+219 silly install resolved     keywords: [ 'mongodb', 'core' ],
+219 silly install resolved     dependencies: { bson: '~0.4.20' },
+219 silly install resolved     devDependencies:
+219 silly install resolved      { 'mongodb-topology-manager': '1.0.x',
+219 silly install resolved        integra: '0.1.8',
+219 silly install resolved        optimist: 'latest',
+219 silly install resolved        jsdoc: '3.3.0-alpha8',
+219 silly install resolved        semver: '4.1.0',
+219 silly install resolved        gleak: '0.5.0',
+219 silly install resolved        mkdirp: '0.5.0',
+219 silly install resolved        rimraf: '2.2.6',
+219 silly install resolved        'es6-promise': '^3.0.2',
+219 silly install resolved        'mongodb-version-manager': '^1.x',
+219 silly install resolved        co: '4.5.4' },
+219 silly install resolved     peerDependencies: { kerberos: '~0.0' },
+219 silly install resolved     author: { name: 'Christian Kvalheim' },
+219 silly install resolved     license: 'Apache-2.0',
+219 silly install resolved     bugs: { url: 'https://github.com/christkv/mongodb-core/issues' },
+219 silly install resolved     homepage: 'https://github.com/christkv/mongodb-core',
+219 silly install resolved     gitHead: '83317be9200ada9d55ce27f16f3ecd17d889e7b6',
+219 silly install resolved     _id: 'mongodb-core@1.2.31',
+219 silly install resolved     _shasum: 'f1e6405f03d40846fdb838a702507affa3cb2c39',
+219 silly install resolved     _from: 'mongodb-core@1.2.31',
+219 silly install resolved     _npmVersion: '1.4.14',
+219 silly install resolved     _npmUser: { name: 'christkv', email: 'christkv@gmail.com' },
+219 silly install resolved     maintainers: [ [Object] ],
+219 silly install resolved     dist:
+219 silly install resolved      { shasum: 'f1e6405f03d40846fdb838a702507affa3cb2c39',
+219 silly install resolved        tarball: 'http://registry.npmjs.org/mongodb-core/-/mongodb-core-1.2.31.tgz' },
+219 silly install resolved     directories: {},
+219 silly install resolved     _resolved: 'https://registry.npmjs.org/mongodb-core/-/mongodb-core-1.2.31.tgz',
+219 silly install resolved     readme: 'ERROR: No README data found!' },
+219 silly install resolved   { name: 'readable-stream',
+219 silly install resolved     version: '1.0.31',
+219 silly install resolved     description: 'Streams2, a user-land copy of the stream library from Node.js v0.10.x',
+219 silly install resolved     main: 'readable.js',
+219 silly install resolved     dependencies:
+219 silly install resolved      { 'core-util-is': '~1.0.0',
+219 silly install resolved        isarray: '0.0.1',
+219 silly install resolved        string_decoder: '~0.10.x',
+219 silly install resolved        inherits: '~2.0.1' },
+219 silly install resolved     devDependencies: { tap: '~0.2.6' },
+219 silly install resolved     scripts: { test: 'tap test/simple/*.js' },
+219 silly install resolved     repository:
+219 silly install resolved      { type: 'git',
+219 silly install resolved        url: 'git://github.com/isaacs/readable-stream.git' },
+219 silly install resolved     keywords: [ 'readable', 'stream', 'pipe' ],
+219 silly install resolved     browser: { util: false },
+219 silly install resolved     author:
+219 silly install resolved      { name: 'Isaac Z. Schlueter',
+219 silly install resolved        email: 'i@izs.me',
+219 silly install resolved        url: 'http://blog.izs.me/' },
+219 silly install resolved     license: 'MIT',
+219 silly install resolved     bugs: { url: 'https://github.com/isaacs/readable-stream/issues' },
+219 silly install resolved     homepage: 'https://github.com/isaacs/readable-stream',
+219 silly install resolved     _id: 'readable-stream@1.0.31',
+219 silly install resolved     _shasum: '8f2502e0bc9e3b0da1b94520aabb4e2603ecafae',
+219 silly install resolved     _from: 'readable-stream@1.0.31',
+219 silly install resolved     _npmVersion: '1.4.9',
+219 silly install resolved     _npmUser: { name: 'rvagg', email: 'rod@vagg.org' },
+219 silly install resolved     maintainers: [ [Object], [Object], [Object] ],
+219 silly install resolved     dist:
+219 silly install resolved      { shasum: '8f2502e0bc9e3b0da1b94520aabb4e2603ecafae',
+219 silly install resolved        tarball: 'http://registry.npmjs.org/readable-stream/-/readable-stream-1.0.31.tgz' },
+219 silly install resolved     directories: {},
+219 silly install resolved     _resolved: 'https://registry.npmjs.org/readable-stream/-/readable-stream-1.0.31.tgz',
+219 silly install resolved     readme: 'ERROR: No README data found!' } ]
+220 info install es6-promise@3.0.2 into /Users/William_Koo/Documents/nodeJS/express1223/node_modules/mongodb
+221 info install mongodb-core@1.2.31 into /Users/William_Koo/Documents/nodeJS/express1223/node_modules/mongodb
+222 info install readable-stream@1.0.31 into /Users/William_Koo/Documents/nodeJS/express1223/node_modules/mongodb
+223 info installOne es6-promise@3.0.2
+224 verbose installOne of es6-promise to /Users/William_Koo/Documents/nodeJS/express1223/node_modules/mongodb not in flight; installing
+225 info installOne mongodb-core@1.2.31
+226 verbose installOne of mongodb-core to /Users/William_Koo/Documents/nodeJS/express1223/node_modules/mongodb not in flight; installing
+227 info installOne readable-stream@1.0.31
+228 verbose installOne of readable-stream to /Users/William_Koo/Documents/nodeJS/express1223/node_modules/mongodb not in flight; installing
+229 verbose lock using /Users/William_Koo/.npm/_locks/es6-promise-e381a681007da6c0.lock for /Users/William_Koo/Documents/nodeJS/express1223/node_modules/mongodb/node_modules/es6-promise
+230 verbose lock using /Users/William_Koo/.npm/_locks/mongodb-core-004df88a5667d767.lock for /Users/William_Koo/Documents/nodeJS/express1223/node_modules/mongodb/node_modules/mongodb-core
+231 verbose lock using /Users/William_Koo/.npm/_locks/readable-stream-d3612b30e1b98e45.lock for /Users/William_Koo/Documents/nodeJS/express1223/node_modules/mongodb/node_modules/readable-stream
+232 silly install write writing es6-promise 3.0.2 to /Users/William_Koo/Documents/nodeJS/express1223/node_modules/mongodb/node_modules/es6-promise
+233 silly install write writing mongodb-core 1.2.31 to /Users/William_Koo/Documents/nodeJS/express1223/node_modules/mongodb/node_modules/mongodb-core
+234 silly install write writing readable-stream 1.0.31 to /Users/William_Koo/Documents/nodeJS/express1223/node_modules/mongodb/node_modules/readable-stream
+235 verbose unbuild node_modules/mongodb/node_modules/es6-promise
+236 verbose unbuild node_modules/mongodb/node_modules/mongodb-core
+237 verbose unbuild node_modules/mongodb/node_modules/readable-stream
+238 silly gentlyRm /Users/William_Koo/Documents/nodeJS/express1223/node_modules/mongodb/node_modules/es6-promise is being purged from base /Users/William_Koo/Documents/nodeJS/express1223
+239 verbose gentlyRm don't care about contents; nuking /Users/William_Koo/Documents/nodeJS/express1223/node_modules/mongodb/node_modules/es6-promise
+240 silly gentlyRm /Users/William_Koo/Documents/nodeJS/express1223/node_modules/mongodb/node_modules/mongodb-core is being purged from base /Users/William_Koo/Documents/nodeJS/express1223
+241 verbose gentlyRm don't care about contents; nuking /Users/William_Koo/Documents/nodeJS/express1223/node_modules/mongodb/node_modules/mongodb-core
+242 silly gentlyRm /Users/William_Koo/Documents/nodeJS/express1223/node_modules/mongodb/node_modules/readable-stream is being purged from base /Users/William_Koo/Documents/nodeJS/express1223
+243 verbose gentlyRm don't care about contents; nuking /Users/William_Koo/Documents/nodeJS/express1223/node_modules/mongodb/node_modules/readable-stream
+244 verbose tar unpack /Users/William_Koo/.npm/es6-promise/3.0.2/package.tgz
+245 verbose tar unpacking to /Users/William_Koo/Documents/nodeJS/express1223/node_modules/mongodb/node_modules/es6-promise
+246 silly gentlyRm /Users/William_Koo/Documents/nodeJS/express1223/node_modules/mongodb/node_modules/es6-promise is being purged
+247 verbose gentlyRm don't care about contents; nuking /Users/William_Koo/Documents/nodeJS/express1223/node_modules/mongodb/node_modules/es6-promise
+248 verbose tar unpack /Users/William_Koo/.npm/mongodb-core/1.2.31/package.tgz
+249 verbose tar unpacking to /Users/William_Koo/Documents/nodeJS/express1223/node_modules/mongodb/node_modules/mongodb-core
+250 silly gentlyRm /Users/William_Koo/Documents/nodeJS/express1223/node_modules/mongodb/node_modules/mongodb-core is being purged
+251 verbose gentlyRm don't care about contents; nuking /Users/William_Koo/Documents/nodeJS/express1223/node_modules/mongodb/node_modules/mongodb-core
+252 verbose tar unpack /Users/William_Koo/.npm/readable-stream/1.0.31/package.tgz
+253 verbose tar unpacking to /Users/William_Koo/Documents/nodeJS/express1223/node_modules/mongodb/node_modules/readable-stream
+254 silly gentlyRm /Users/William_Koo/Documents/nodeJS/express1223/node_modules/mongodb/node_modules/readable-stream is being purged
+255 verbose gentlyRm don't care about contents; nuking /Users/William_Koo/Documents/nodeJS/express1223/node_modules/mongodb/node_modules/readable-stream
+256 silly gunzTarPerm modes [ '755', '644' ]
+257 silly gunzTarPerm modes [ '755', '644' ]
+258 silly gunzTarPerm modes [ '755', '644' ]
+259 silly gunzTarPerm extractEntry package.json
+260 silly gunzTarPerm extractEntry package.json
+261 silly gunzTarPerm extractEntry package.json
+262 silly gunzTarPerm modified mode [ 'package.json', 436, 420 ]
+263 silly gunzTarPerm extractEntry README.md
+264 silly gunzTarPerm extractEntry LICENSE
+265 silly gunzTarPerm extractEntry README.md
+266 silly gunzTarPerm extractEntry LICENSE
+267 silly gunzTarPerm extractEntry .npmignore
+268 silly gunzTarPerm extractEntry README.md
+269 silly gunzTarPerm modified mode [ 'README.md', 436, 420 ]
+270 silly gunzTarPerm extractEntry CHANGELOG.md
+271 silly gunzTarPerm extractEntry index.js
+272 silly gunzTarPerm extractEntry LICENSE
+273 silly gunzTarPerm modified mode [ 'LICENSE', 436, 420 ]
+274 silly gunzTarPerm extractEntry transform.js
+275 silly gunzTarPerm extractEntry duplex.js
+276 silly gunzTarPerm extractEntry readable.js
+277 silly gunzTarPerm modified mode [ 'readable.js', 436, 420 ]
+278 silly gunzTarPerm extractEntry dist/es6-promise.js
+279 silly gunzTarPerm extractEntry dist/es6-promise.min.js
+280 silly gunzTarPerm extractEntry conf.json
+281 silly gunzTarPerm extractEntry Makefile
+282 silly gunzTarPerm extractEntry passthrough.js
+283 silly gunzTarPerm extractEntry writable.js
+284 silly gunzTarPerm extractEntry lib/es6-promise.umd.js
+285 silly gunzTarPerm extractEntry lib/es6-promise/-internal.js
+286 silly gunzTarPerm extractEntry HISTORY.md
+287 silly gunzTarPerm extractEntry lib/cursor.js
+288 silly gunzTarPerm extractEntry lib/es6-promise/asap.js
+289 silly gunzTarPerm extractEntry lib/es6-promise/enumerator.js
+290 silly gunzTarPerm extractEntry lib/es6-promise/polyfill.js
+291 silly gunzTarPerm extractEntry lib/_stream_duplex.js
+292 silly gunzTarPerm modified mode [ 'lib/_stream_duplex.js', 436, 420 ]
+293 silly gunzTarPerm extractEntry lib/_stream_passthrough.js
+294 silly gunzTarPerm modified mode [ 'lib/_stream_passthrough.js', 436, 420 ]
+295 silly gunzTarPerm extractEntry lib/error.js
+296 silly gunzTarPerm extractEntry lib/auth/gssapi.js
+297 silly gunzTarPerm extractEntry lib/es6-promise/promise.js
+298 silly gunzTarPerm extractEntry lib/_stream_readable.js
+299 silly gunzTarPerm modified mode [ 'lib/_stream_readable.js', 436, 420 ]
+300 silly gunzTarPerm extractEntry lib/auth/mongocr.js
+301 silly gunzTarPerm extractEntry lib/auth/plain.js
+302 silly gunzTarPerm extractEntry lib/es6-promise/utils.js
+303 silly gunzTarPerm extractEntry lib/es6-promise/promise/all.js
+304 silly gunzTarPerm extractEntry lib/es6-promise/promise/race.js
+305 silly gunzTarPerm extractEntry lib/es6-promise/promise/reject.js
+306 silly gunzTarPerm extractEntry lib/_stream_transform.js
+307 silly gunzTarPerm modified mode [ 'lib/_stream_transform.js', 436, 420 ]
+308 silly gunzTarPerm extractEntry lib/_stream_writable.js
+309 silly gunzTarPerm modified mode [ 'lib/_stream_writable.js', 436, 420 ]
+310 silly gunzTarPerm extractEntry lib/auth/scram.js
+311 silly gunzTarPerm extractEntry lib/auth/sspi.js
+312 silly gunzTarPerm extractEntry lib/es6-promise/promise/resolve.js
+313 silly gunzTarPerm extractEntry lib/auth/x509.js
+314 silly gunzTarPerm extractEntry lib/connection/commands.js
+315 silly gunzTarPerm extractEntry lib/connection/connection.js
+316 silly gunzTarPerm extractEntry lib/connection/logger.js
+317 silly gunzTarPerm extractEntry lib/connection/pool.js
+318 silly gunzTarPerm extractEntry lib/connection/utils.js
+319 silly gunzTarPerm extractEntry lib/tools/smoke_plugin.js
+320 silly gunzTarPerm extractEntry lib/topologies/command_result.js
+321 silly gunzTarPerm extractEntry lib/topologies/mongos.js
+322 silly gunzTarPerm extractEntry lib/topologies/read_preference.js
+323 silly gunzTarPerm extractEntry lib/topologies/replset.js
+324 silly gunzTarPerm extractEntry lib/topologies/replset_state.js
+325 silly gunzTarPerm extractEntry lib/topologies/server.js
+326 silly gunzTarPerm extractEntry lib/topologies/session.js
+327 silly gunzTarPerm extractEntry lib/topologies/strategies/ping.js
+328 silly gunzTarPerm extractEntry lib/wireprotocol/2_4_support.js
+329 verbose write writing to /Users/William_Koo/Documents/nodeJS/express1223/node_modules/mongodb/node_modules/readable-stream/package.json
+330 silly gunzTarPerm extractEntry lib/wireprotocol/2_6_support.js
+331 silly gunzTarPerm extractEntry lib/wireprotocol/3_2_support.js
+332 silly gunzTarPerm extractEntry lib/wireprotocol/commands.js
+333 silly gunzTarPerm extractEntry simple_2_document_limit_toArray.dat
+334 silly gunzTarPerm extractEntry TESTING.md
+335 info preinstall readable-stream@1.0.31
+336 verbose readDependencies loading dependencies from /Users/William_Koo/Documents/nodeJS/express1223/node_modules/mongodb/node_modules/readable-stream/package.json
+337 verbose write writing to /Users/William_Koo/Documents/nodeJS/express1223/node_modules/mongodb/node_modules/es6-promise/package.json
+338 info preinstall es6-promise@3.0.2
+339 verbose readDependencies loading dependencies from /Users/William_Koo/Documents/nodeJS/express1223/node_modules/mongodb/node_modules/es6-promise/package.json
+340 silly prepareForInstallMany adding core-util-is@~1.0.0 from readable-stream dependencies
+341 silly prepareForInstallMany adding isarray@0.0.1 from readable-stream dependencies
+342 silly prepareForInstallMany adding string_decoder@~0.10.x from readable-stream dependencies
+343 silly prepareForInstallMany adding inherits@~2.0.1 from readable-stream dependencies
+344 verbose readDependencies loading dependencies from /Users/William_Koo/Documents/nodeJS/express1223/node_modules/mongodb/node_modules/readable-stream/package.json
+345 verbose readDependencies loading dependencies from /Users/William_Koo/Documents/nodeJS/express1223/node_modules/mongodb/node_modules/es6-promise/package.json
+346 silly cache add args [ 'core-util-is@~1.0.0', null ]
+347 verbose cache add spec core-util-is@~1.0.0
+348 silly cache add args [ 'isarray@0.0.1', null ]
+349 verbose cache add spec isarray@0.0.1
+350 silly cache add parsed spec Result {
+350 silly cache add   raw: 'core-util-is@~1.0.0',
+350 silly cache add   scope: null,
+350 silly cache add   name: 'core-util-is',
+350 silly cache add   rawSpec: '~1.0.0',
+350 silly cache add   spec: '>=1.0.0 <1.1.0',
+350 silly cache add   type: 'range' }
+351 silly addNamed core-util-is@>=1.0.0 <1.1.0
+352 verbose addNamed ">=1.0.0 <1.1.0" is a valid semver range for core-util-is
+353 silly addNameRange { name: 'core-util-is', range: '>=1.0.0 <1.1.0', hasData: false }
+354 silly mapToRegistry name core-util-is
+355 silly mapToRegistry using default registry
+356 silly mapToRegistry registry https://registry.npmjs.org/
+357 silly mapToRegistry uri https://registry.npmjs.org/core-util-is
+358 verbose addNameRange registry:https://registry.npmjs.org/core-util-is not in flight; fetching
+359 silly cache add parsed spec Result {
+359 silly cache add   raw: 'isarray@0.0.1',
+359 silly cache add   scope: null,
+359 silly cache add   name: 'isarray',
+359 silly cache add   rawSpec: '0.0.1',
+359 silly cache add   spec: '0.0.1',
+359 silly cache add   type: 'version' }
+360 silly addNamed isarray@0.0.1
+361 verbose addNamed "0.0.1" is a plain semver version for isarray
+362 silly mapToRegistry name isarray
+363 silly mapToRegistry using default registry
+364 silly mapToRegistry registry https://registry.npmjs.org/
+365 silly mapToRegistry uri https://registry.npmjs.org/isarray
+366 verbose addNameVersion registry:https://registry.npmjs.org/isarray not in flight; fetching
+367 silly cache add args [ 'string_decoder@~0.10.x', null ]
+368 verbose cache add spec string_decoder@~0.10.x
+369 silly cache add parsed spec Result {
+369 silly cache add   raw: 'string_decoder@~0.10.x',
+369 silly cache add   scope: null,
+369 silly cache add   name: 'string_decoder',
+369 silly cache add   rawSpec: '~0.10.x',
+369 silly cache add   spec: '>=0.10.0 <0.11.0',
+369 silly cache add   type: 'range' }
+370 silly addNamed string_decoder@>=0.10.0 <0.11.0
+371 verbose addNamed ">=0.10.0 <0.11.0" is a valid semver range for string_decoder
+372 silly addNameRange { name: 'string_decoder',
+372 silly addNameRange   range: '>=0.10.0 <0.11.0',
+372 silly addNameRange   hasData: false }
+373 silly mapToRegistry name string_decoder
+374 silly mapToRegistry using default registry
+375 silly mapToRegistry registry https://registry.npmjs.org/
+376 silly mapToRegistry uri https://registry.npmjs.org/string_decoder
+377 verbose addNameRange registry:https://registry.npmjs.org/string_decoder not in flight; fetching
+378 silly cache add args [ 'inherits@~2.0.1', null ]
+379 verbose cache add spec inherits@~2.0.1
+380 silly cache add parsed spec Result {
+380 silly cache add   raw: 'inherits@~2.0.1',
+380 silly cache add   scope: null,
+380 silly cache add   name: 'inherits',
+380 silly cache add   rawSpec: '~2.0.1',
+380 silly cache add   spec: '>=2.0.1 <2.1.0',
+380 silly cache add   type: 'range' }
+381 silly addNamed inherits@>=2.0.1 <2.1.0
+382 verbose addNamed ">=2.0.1 <2.1.0" is a valid semver range for inherits
+383 silly addNameRange { name: 'inherits', range: '>=2.0.1 <2.1.0', hasData: false }
+384 silly mapToRegistry name inherits
+385 silly mapToRegistry using default registry
+386 silly mapToRegistry registry https://registry.npmjs.org/
+387 silly mapToRegistry uri https://registry.npmjs.org/inherits
+388 verbose addNameRange registry:https://registry.npmjs.org/inherits not in flight; fetching
+389 silly install resolved []
+390 verbose about to build /Users/William_Koo/Documents/nodeJS/express1223/node_modules/mongodb/node_modules/es6-promise
+391 info build /Users/William_Koo/Documents/nodeJS/express1223/node_modules/mongodb/node_modules/es6-promise
+392 verbose request uri https://registry.npmjs.org/core-util-is
+393 verbose request no auth needed
+394 info attempt registry request try #1 at 4:44:22 PM
+395 verbose etag "75RK9UUWAHLYO40UZKLLOJ8YF"
+396 http request GET https://registry.npmjs.org/core-util-is
+397 verbose request uri https://registry.npmjs.org/isarray
+398 verbose request no auth needed
+399 info attempt registry request try #1 at 4:44:22 PM
+400 verbose etag "9BAUPW5RTV3W0838KA6Y08NTG"
+401 http request GET https://registry.npmjs.org/isarray
+402 info linkStuff es6-promise@3.0.2
+403 silly linkStuff es6-promise@3.0.2 has /Users/William_Koo/Documents/nodeJS/express1223/node_modules/mongodb/node_modules as its parent node_modules
+404 verbose request uri https://registry.npmjs.org/string_decoder
+405 verbose request no auth needed
+406 info attempt registry request try #1 at 4:44:22 PM
+407 verbose etag "3SLQP4XEWUIBONOV855WOPR0B"
+408 http request GET https://registry.npmjs.org/string_decoder
+409 verbose request uri https://registry.npmjs.org/inherits
+410 verbose request no auth needed
+411 info attempt registry request try #1 at 4:44:22 PM
+412 verbose etag "CKJX1OCRDNX2UW7IZR6DX5BIN"
+413 http request GET https://registry.npmjs.org/inherits
+414 verbose linkBins es6-promise@3.0.2
+415 verbose linkMans es6-promise@3.0.2
+416 verbose rebuildBundles es6-promise@3.0.2
+417 info install es6-promise@3.0.2
+418 info postinstall es6-promise@3.0.2
+419 verbose unlock done using /Users/William_Koo/.npm/_locks/es6-promise-e381a681007da6c0.lock for /Users/William_Koo/Documents/nodeJS/express1223/node_modules/mongodb/node_modules/es6-promise
+420 verbose write writing to /Users/William_Koo/Documents/nodeJS/express1223/node_modules/mongodb/node_modules/mongodb-core/package.json
+421 info preinstall mongodb-core@1.2.31
+422 verbose readDependencies loading dependencies from /Users/William_Koo/Documents/nodeJS/express1223/node_modules/mongodb/node_modules/mongodb-core/package.json
+423 silly prepareForInstallMany adding bson@~0.4.20 from mongodb-core dependencies
+424 silly prepareForInstallMany adding kerberos@~0.0 from mongodb-core peerDependencies
+425 warn peerDependencies The peer dependency kerberos@~0.0 included from mongodb-core will no
+426 warn peerDependencies longer be automatically installed to fulfill the peerDependency
+427 warn peerDependencies in npm 3+. Your application will need to depend on it explicitly.
+428 verbose readDependencies loading dependencies from /Users/William_Koo/Documents/nodeJS/express1223/node_modules/mongodb/node_modules/mongodb-core/package.json
+429 silly cache add args [ 'bson@~0.4.20', null ]
+430 verbose cache add spec bson@~0.4.20
+431 silly cache add parsed spec Result {
+431 silly cache add   raw: 'bson@~0.4.20',
+431 silly cache add   scope: null,
+431 silly cache add   name: 'bson',
+431 silly cache add   rawSpec: '~0.4.20',
+431 silly cache add   spec: '>=0.4.20 <0.5.0',
+431 silly cache add   type: 'range' }
+432 silly addNamed bson@>=0.4.20 <0.5.0
+433 verbose addNamed ">=0.4.20 <0.5.0" is a valid semver range for bson
+434 silly addNameRange { name: 'bson', range: '>=0.4.20 <0.5.0', hasData: false }
+435 silly mapToRegistry name bson
+436 silly mapToRegistry using default registry
+437 silly mapToRegistry registry https://registry.npmjs.org/
+438 silly mapToRegistry uri https://registry.npmjs.org/bson
+439 verbose addNameRange registry:https://registry.npmjs.org/bson not in flight; fetching
+440 verbose request uri https://registry.npmjs.org/bson
+441 verbose request no auth needed
+442 info attempt registry request try #1 at 4:44:22 PM
+443 verbose etag "3JA7YUYKYJEJYJTYC81GGPDTG"
+444 http request GET https://registry.npmjs.org/bson
+445 http 304 https://registry.npmjs.org/core-util-is
+446 verbose headers { date: 'Tue, 05 Jan 2016 08:44:24 GMT',
+446 verbose headers   via: '1.1 varnish',
+446 verbose headers   'cache-control': 'max-age=300',
+446 verbose headers   etag: '"75RK9UUWAHLYO40UZKLLOJ8YF"',
+446 verbose headers   age: '19',
+446 verbose headers   connection: 'keep-alive',
+446 verbose headers   'x-served-by': 'cache-hkg6824-HKG',
+446 verbose headers   'x-cache': 'HIT',
+446 verbose headers   'x-cache-hits': '3',
+446 verbose headers   'x-timer': 'S1451983464.073454,VS0,VE0',
+446 verbose headers   vary: 'Accept' }
+447 silly get cb [ 304,
+447 silly get   { date: 'Tue, 05 Jan 2016 08:44:24 GMT',
+447 silly get     via: '1.1 varnish',
+447 silly get     'cache-control': 'max-age=300',
+447 silly get     etag: '"75RK9UUWAHLYO40UZKLLOJ8YF"',
+447 silly get     age: '19',
+447 silly get     connection: 'keep-alive',
+447 silly get     'x-served-by': 'cache-hkg6824-HKG',
+447 silly get     'x-cache': 'HIT',
+447 silly get     'x-cache-hits': '3',
+447 silly get     'x-timer': 'S1451983464.073454,VS0,VE0',
+447 silly get     vary: 'Accept' } ]
+448 verbose etag https://registry.npmjs.org/core-util-is from cache
+449 verbose get saving core-util-is to /Users/William_Koo/.npm/registry.npmjs.org/core-util-is/.cache.json
+450 silly addNameRange number 2 { name: 'core-util-is', range: '>=1.0.0 <1.1.0', hasData: true }
+451 silly addNameRange versions [ 'core-util-is', [ '1.0.0', '1.0.1', '1.0.2' ] ]
+452 silly addNamed core-util-is@1.0.2
+453 verbose addNamed "1.0.2" is a plain semver version for core-util-is
+454 silly cache afterAdd core-util-is@1.0.2
+455 verbose afterAdd /Users/William_Koo/.npm/core-util-is/1.0.2/package/package.json not in flight; writing
+456 verbose afterAdd /Users/William_Koo/.npm/core-util-is/1.0.2/package/package.json written
+457 http 304 https://registry.npmjs.org/string_decoder
+458 verbose headers { date: 'Tue, 05 Jan 2016 08:44:24 GMT',
+458 verbose headers   via: '1.1 varnish',
+458 verbose headers   'cache-control': 'max-age=300',
+458 verbose headers   etag: '"3SLQP4XEWUIBONOV855WOPR0B"',
+458 verbose headers   age: '18',
+458 verbose headers   connection: 'keep-alive',
+458 verbose headers   'x-served-by': 'cache-hkg6826-HKG',
+458 verbose headers   'x-cache': 'HIT',
+458 verbose headers   'x-cache-hits': '3',
+458 verbose headers   'x-timer': 'S1451983464.083845,VS0,VE0',
+458 verbose headers   vary: 'Accept' }
+459 silly get cb [ 304,
+459 silly get   { date: 'Tue, 05 Jan 2016 08:44:24 GMT',
+459 silly get     via: '1.1 varnish',
+459 silly get     'cache-control': 'max-age=300',
+459 silly get     etag: '"3SLQP4XEWUIBONOV855WOPR0B"',
+459 silly get     age: '18',
+459 silly get     connection: 'keep-alive',
+459 silly get     'x-served-by': 'cache-hkg6826-HKG',
+459 silly get     'x-cache': 'HIT',
+459 silly get     'x-cache-hits': '3',
+459 silly get     'x-timer': 'S1451983464.083845,VS0,VE0',
+459 silly get     vary: 'Accept' } ]
+460 verbose etag https://registry.npmjs.org/string_decoder from cache
+461 verbose get saving string_decoder to /Users/William_Koo/.npm/registry.npmjs.org/string_decoder/.cache.json
+462 http 304 https://registry.npmjs.org/isarray
+463 verbose headers { date: 'Tue, 05 Jan 2016 08:44:24 GMT',
+463 verbose headers   via: '1.1 varnish',
+463 verbose headers   'cache-control': 'max-age=300',
+463 verbose headers   etag: '"9BAUPW5RTV3W0838KA6Y08NTG"',
+463 verbose headers   age: '149',
+463 verbose headers   connection: 'keep-alive',
+463 verbose headers   'x-served-by': 'cache-hkg6821-HKG',
+463 verbose headers   'x-cache': 'HIT',
+463 verbose headers   'x-cache-hits': '8',
+463 verbose headers   'x-timer': 'S1451983464.083263,VS0,VE0',
+463 verbose headers   vary: 'Accept' }
+464 silly get cb [ 304,
+464 silly get   { date: 'Tue, 05 Jan 2016 08:44:24 GMT',
+464 silly get     via: '1.1 varnish',
+464 silly get     'cache-control': 'max-age=300',
+464 silly get     etag: '"9BAUPW5RTV3W0838KA6Y08NTG"',
+464 silly get     age: '149',
+464 silly get     connection: 'keep-alive',
+464 silly get     'x-served-by': 'cache-hkg6821-HKG',
+464 silly get     'x-cache': 'HIT',
+464 silly get     'x-cache-hits': '8',
+464 silly get     'x-timer': 'S1451983464.083263,VS0,VE0',
+464 silly get     vary: 'Accept' } ]
+465 verbose etag https://registry.npmjs.org/isarray from cache
+466 verbose get saving isarray to /Users/William_Koo/.npm/registry.npmjs.org/isarray/.cache.json
+467 silly addNameRange number 2 { name: 'string_decoder',
+467 silly addNameRange   range: '>=0.10.0 <0.11.0',
+467 silly addNameRange   hasData: true }
+468 silly addNameRange versions [ 'string_decoder',
+468 silly addNameRange   [ '0.0.0',
+468 silly addNameRange     '0.0.1',
+468 silly addNameRange     '0.10.24',
+468 silly addNameRange     '0.11.10',
+468 silly addNameRange     '0.10.25',
+468 silly addNameRange     '0.11.10-1',
+468 silly addNameRange     '0.10.25-1',
+468 silly addNameRange     '0.10.31' ] ]
+469 silly addNamed string_decoder@0.10.31
+470 verbose addNamed "0.10.31" is a plain semver version for string_decoder
+471 silly cache afterAdd isarray@0.0.1
+472 verbose afterAdd /Users/William_Koo/.npm/isarray/0.0.1/package/package.json not in flight; writing
+473 silly cache afterAdd string_decoder@0.10.31
+474 verbose afterAdd /Users/William_Koo/.npm/string_decoder/0.10.31/package/package.json not in flight; writing
+475 verbose afterAdd /Users/William_Koo/.npm/isarray/0.0.1/package/package.json written
+476 verbose afterAdd /Users/William_Koo/.npm/string_decoder/0.10.31/package/package.json written
+477 http 304 https://registry.npmjs.org/inherits
+478 verbose headers { date: 'Tue, 05 Jan 2016 08:44:24 GMT',
+478 verbose headers   via: '1.1 varnish',
+478 verbose headers   'cache-control': 'max-age=300',
+478 verbose headers   etag: '"CKJX1OCRDNX2UW7IZR6DX5BIN"',
+478 verbose headers   age: '48',
+478 verbose headers   connection: 'keep-alive',
+478 verbose headers   'x-served-by': 'cache-hkg6822-HKG',
+478 verbose headers   'x-cache': 'HIT',
+478 verbose headers   'x-cache-hits': '2',
+478 verbose headers   'x-timer': 'S1451983464.094188,VS0,VE0',
+478 verbose headers   vary: 'Accept' }
+479 silly get cb [ 304,
+479 silly get   { date: 'Tue, 05 Jan 2016 08:44:24 GMT',
+479 silly get     via: '1.1 varnish',
+479 silly get     'cache-control': 'max-age=300',
+479 silly get     etag: '"CKJX1OCRDNX2UW7IZR6DX5BIN"',
+479 silly get     age: '48',
+479 silly get     connection: 'keep-alive',
+479 silly get     'x-served-by': 'cache-hkg6822-HKG',
+479 silly get     'x-cache': 'HIT',
+479 silly get     'x-cache-hits': '2',
+479 silly get     'x-timer': 'S1451983464.094188,VS0,VE0',
+479 silly get     vary: 'Accept' } ]
+480 verbose etag https://registry.npmjs.org/inherits from cache
+481 verbose get saving inherits to /Users/William_Koo/.npm/registry.npmjs.org/inherits/.cache.json
+482 silly addNameRange number 2 { name: 'inherits', range: '>=2.0.1 <2.1.0', hasData: true }
+483 silly addNameRange versions [ 'inherits', [ '1.0.0', '2.0.0', '2.0.1', '1.0.1', '1.0.2' ] ]
+484 silly addNamed inherits@2.0.1
+485 verbose addNamed "2.0.1" is a plain semver version for inherits
+486 silly cache afterAdd inherits@2.0.1
+487 verbose afterAdd /Users/William_Koo/.npm/inherits/2.0.1/package/package.json not in flight; writing
+488 verbose afterAdd /Users/William_Koo/.npm/inherits/2.0.1/package/package.json written
+489 silly install resolved [ { name: 'core-util-is',
+489 silly install resolved     version: '1.0.2',
+489 silly install resolved     description: 'The `util.is*` functions introduced in Node v0.12.',
+489 silly install resolved     main: 'lib/util.js',
+489 silly install resolved     repository: { type: 'git', url: 'git://github.com/isaacs/core-util-is.git' },
+489 silly install resolved     keywords:
+489 silly install resolved      [ 'util',
+489 silly install resolved        'isBuffer',
+489 silly install resolved        'isArray',
+489 silly install resolved        'isNumber',
+489 silly install resolved        'isString',
+489 silly install resolved        'isRegExp',
+489 silly install resolved        'isThis',
+489 silly install resolved        'isThat',
+489 silly install resolved        'polyfill' ],
+489 silly install resolved     author:
+489 silly install resolved      { name: 'Isaac Z. Schlueter',
+489 silly install resolved        email: 'i@izs.me',
+489 silly install resolved        url: 'http://blog.izs.me/' },
+489 silly install resolved     license: 'MIT',
+489 silly install resolved     bugs: { url: 'https://github.com/isaacs/core-util-is/issues' },
+489 silly install resolved     scripts: { test: 'tap test.js' },
+489 silly install resolved     devDependencies: { tap: '^2.3.0' },
+489 silly install resolved     gitHead: 'a177da234df5638b363ddc15fa324619a38577c8',
+489 silly install resolved     homepage: 'https://github.com/isaacs/core-util-is#readme',
+489 silly install resolved     _id: 'core-util-is@1.0.2',
+489 silly install resolved     _shasum: 'b5fd54220aa2bc5ab57aab7140c940754503c1a7',
+489 silly install resolved     _from: 'core-util-is@>=1.0.0 <1.1.0',
+489 silly install resolved     _npmVersion: '3.3.2',
+489 silly install resolved     _nodeVersion: '4.0.0',
+489 silly install resolved     _npmUser: { name: 'isaacs', email: 'i@izs.me' },
+489 silly install resolved     dist:
+489 silly install resolved      { shasum: 'b5fd54220aa2bc5ab57aab7140c940754503c1a7',
+489 silly install resolved        tarball: 'http://registry.npmjs.org/core-util-is/-/core-util-is-1.0.2.tgz' },
+489 silly install resolved     maintainers: [ [Object] ],
+489 silly install resolved     directories: {},
+489 silly install resolved     _resolved: 'https://registry.npmjs.org/core-util-is/-/core-util-is-1.0.2.tgz',
+489 silly install resolved     readme: 'ERROR: No README data found!' },
+489 silly install resolved   { name: 'isarray',
+489 silly install resolved     description: 'Array#isArray for older browsers',
+489 silly install resolved     version: '0.0.1',
+489 silly install resolved     repository:
+489 silly install resolved      { type: 'git',
+489 silly install resolved        url: 'git://github.com/juliangruber/isarray.git' },
+489 silly install resolved     homepage: 'https://github.com/juliangruber/isarray',
+489 silly install resolved     main: 'index.js',
+489 silly install resolved     scripts: { test: 'tap test/*.js' },
+489 silly install resolved     dependencies: {},
+489 silly install resolved     devDependencies: { tap: '*' },
+489 silly install resolved     keywords: [ 'browser', 'isarray', 'array' ],
+489 silly install resolved     author:
+489 silly install resolved      { name: 'Julian Gruber',
+489 silly install resolved        email: 'mail@juliangruber.com',
+489 silly install resolved        url: 'http://juliangruber.com' },
+489 silly install resolved     license: 'MIT',
+489 silly install resolved     _id: 'isarray@0.0.1',
+489 silly install resolved     dist:
+489 silly install resolved      { shasum: '8a18acfca9a8f4177e09abfc6038939b05d1eedf',
+489 silly install resolved        tarball: 'http://registry.npmjs.org/isarray/-/isarray-0.0.1.tgz' },
+489 silly install resolved     _from: 'isarray@0.0.1',
+489 silly install resolved     _npmVersion: '1.2.18',
+489 silly install resolved     _npmUser: { name: 'juliangruber', email: 'julian@juliangruber.com' },
+489 silly install resolved     maintainers: [ [Object] ],
+489 silly install resolved     directories: {},
+489 silly install resolved     _shasum: '8a18acfca9a8f4177e09abfc6038939b05d1eedf',
+489 silly install resolved     _resolved: 'https://registry.npmjs.org/isarray/-/isarray-0.0.1.tgz',
+489 silly install resolved     bugs: { url: 'https://github.com/juliangruber/isarray/issues' },
+489 silly install resolved     readme: 'ERROR: No README data found!' },
+489 silly install resolved   { name: 'string_decoder',
+489 silly install resolved     version: '0.10.31',
+489 silly install resolved     description: 'The string_decoder module from Node core',
+489 silly install resolved     main: 'index.js',
+489 silly install resolved     dependencies: {},
+489 silly install resolved     devDependencies: { tap: '~0.4.8' },
+489 silly install resolved     scripts: { test: 'tap test/simple/*.js' },
+489 silly install resolved     repository:
+489 silly install resolved      { type: 'git',
+489 silly install resolved        url: 'git://github.com/rvagg/string_decoder.git' },
+489 silly install resolved     homepage: 'https://github.com/rvagg/string_decoder',
+489 silly install resolved     keywords: [ 'string', 'decoder', 'browser', 'browserify' ],
+489 silly install resolved     license: 'MIT',
+489 silly install resolved     gitHead: 'd46d4fd87cf1d06e031c23f1ba170ca7d4ade9a0',
+489 silly install resolved     bugs: { url: 'https://github.com/rvagg/string_decoder/issues' },
+489 silly install resolved     _id: 'string_decoder@0.10.31',
+489 silly install resolved     _shasum: '62e203bc41766c6c28c9fc84301dab1c5310fa94',
+489 silly install resolved     _from: 'string_decoder@>=0.10.0 <0.11.0',
+489 silly install resolved     _npmVersion: '1.4.23',
+489 silly install resolved     _npmUser: { name: 'rvagg', email: 'rod@vagg.org' },
+489 silly install resolved     maintainers: [ [Object], [Object] ],
+489 silly install resolved     dist:
+489 silly install resolved      { shasum: '62e203bc41766c6c28c9fc84301dab1c5310fa94',
+489 silly install resolved        tarball: 'http://registry.npmjs.org/string_decoder/-/string_decoder-0.10.31.tgz' },
+489 silly install resolved     directories: {},
+489 silly install resolved     _resolved: 'https://registry.npmjs.org/string_decoder/-/string_decoder-0.10.31.tgz',
+489 silly install resolved     readme: 'ERROR: No README data found!' },
+489 silly install resolved   { name: 'inherits',
+489 silly install resolved     description: 'Browser-friendly inheritance fully compatible with standard node.js inherits()',
+489 silly install resolved     version: '2.0.1',
+489 silly install resolved     keywords:
+489 silly install resolved      [ 'inheritance',
+489 silly install resolved        'class',
+489 silly install resolved        'klass',
+489 silly install resolved        'oop',
+489 silly install resolved        'object-oriented',
+489 silly install resolved        'inherits',
+489 silly install resolved        'browser',
+489 silly install resolved        'browserify' ],
+489 silly install resolved     main: './inherits.js',
+489 silly install resolved     browser: './inherits_browser.js',
+489 silly install resolved     repository: { type: 'git', url: 'git://github.com/isaacs/inherits.git' },
+489 silly install resolved     license: 'ISC',
+489 silly install resolved     scripts: { test: 'node test' },
+489 silly install resolved     bugs: { url: 'https://github.com/isaacs/inherits/issues' },
+489 silly install resolved     _id: 'inherits@2.0.1',
+489 silly install resolved     dist:
+489 silly install resolved      { shasum: 'b17d08d326b4423e568eff719f91b0b1cbdf69f1',
+489 silly install resolved        tarball: 'http://registry.npmjs.org/inherits/-/inherits-2.0.1.tgz' },
+489 silly install resolved     _from: 'inherits@>=2.0.1 <2.1.0',
+489 silly install resolved     _npmVersion: '1.3.8',
+489 silly install resolved     _npmUser: { name: 'isaacs', email: 'i@izs.me' },
+489 silly install resolved     maintainers: [ [Object] ],
+489 silly install resolved     directories: {},
+489 silly install resolved     _shasum: 'b17d08d326b4423e568eff719f91b0b1cbdf69f1',
+489 silly install resolved     _resolved: 'https://registry.npmjs.org/inherits/-/inherits-2.0.1.tgz',
+489 silly install resolved     readme: 'ERROR: No README data found!',
+489 silly install resolved     homepage: 'https://github.com/isaacs/inherits#readme' } ]
+490 info install core-util-is@1.0.2 into /Users/William_Koo/Documents/nodeJS/express1223/node_modules/mongodb/node_modules/readable-stream
+491 info install isarray@0.0.1 into /Users/William_Koo/Documents/nodeJS/express1223/node_modules/mongodb/node_modules/readable-stream
+492 info install string_decoder@0.10.31 into /Users/William_Koo/Documents/nodeJS/express1223/node_modules/mongodb/node_modules/readable-stream
+493 info install inherits@2.0.1 into /Users/William_Koo/Documents/nodeJS/express1223/node_modules/mongodb/node_modules/readable-stream
+494 info installOne core-util-is@1.0.2
+495 verbose installOne of core-util-is to /Users/William_Koo/Documents/nodeJS/express1223/node_modules/mongodb/node_modules/readable-stream not in flight; installing
+496 info installOne isarray@0.0.1
+497 verbose installOne of isarray to /Users/William_Koo/Documents/nodeJS/express1223/node_modules/mongodb/node_modules/readable-stream not in flight; installing
+498 info installOne string_decoder@0.10.31
+499 verbose installOne of string_decoder to /Users/William_Koo/Documents/nodeJS/express1223/node_modules/mongodb/node_modules/readable-stream not in flight; installing
+500 info installOne inherits@2.0.1
+501 verbose installOne of inherits to /Users/William_Koo/Documents/nodeJS/express1223/node_modules/mongodb/node_modules/readable-stream not in flight; installing
+502 verbose lock using /Users/William_Koo/.npm/_locks/core-util-is-0a1e8ff2dc4713f4.lock for /Users/William_Koo/Documents/nodeJS/express1223/node_modules/mongodb/node_modules/readable-stream/node_modules/core-util-is
+503 verbose lock using /Users/William_Koo/.npm/_locks/isarray-1f1dacb73cc2386a.lock for /Users/William_Koo/Documents/nodeJS/express1223/node_modules/mongodb/node_modules/readable-stream/node_modules/isarray
+504 silly install write writing core-util-is 1.0.2 to /Users/William_Koo/Documents/nodeJS/express1223/node_modules/mongodb/node_modules/readable-stream/node_modules/core-util-is
+505 verbose lock using /Users/William_Koo/.npm/_locks/string-decoder-a3dfa80b6a62c2da.lock for /Users/William_Koo/Documents/nodeJS/express1223/node_modules/mongodb/node_modules/readable-stream/node_modules/string_decoder
+506 silly install write writing isarray 0.0.1 to /Users/William_Koo/Documents/nodeJS/express1223/node_modules/mongodb/node_modules/readable-stream/node_modules/isarray
+507 verbose lock using /Users/William_Koo/.npm/_locks/inherits-f6e757d76daf72c9.lock for /Users/William_Koo/Documents/nodeJS/express1223/node_modules/mongodb/node_modules/readable-stream/node_modules/inherits
+508 silly install write writing string_decoder 0.10.31 to /Users/William_Koo/Documents/nodeJS/express1223/node_modules/mongodb/node_modules/readable-stream/node_modules/string_decoder
+509 silly install write writing inherits 2.0.1 to /Users/William_Koo/Documents/nodeJS/express1223/node_modules/mongodb/node_modules/readable-stream/node_modules/inherits
+510 verbose unbuild node_modules/mongodb/node_modules/readable-stream/node_modules/core-util-is
+511 verbose unbuild node_modules/mongodb/node_modules/readable-stream/node_modules/isarray
+512 verbose unbuild node_modules/mongodb/node_modules/readable-stream/node_modules/string_decoder
+513 verbose unbuild node_modules/mongodb/node_modules/readable-stream/node_modules/inherits
+514 silly gentlyRm /Users/William_Koo/Documents/nodeJS/express1223/node_modules/mongodb/node_modules/readable-stream/node_modules/core-util-is is being purged from base /Users/William_Koo/Documents/nodeJS/express1223
+515 verbose gentlyRm don't care about contents; nuking /Users/William_Koo/Documents/nodeJS/express1223/node_modules/mongodb/node_modules/readable-stream/node_modules/core-util-is
+516 silly gentlyRm /Users/William_Koo/Documents/nodeJS/express1223/node_modules/mongodb/node_modules/readable-stream/node_modules/isarray is being purged from base /Users/William_Koo/Documents/nodeJS/express1223
+517 verbose gentlyRm don't care about contents; nuking /Users/William_Koo/Documents/nodeJS/express1223/node_modules/mongodb/node_modules/readable-stream/node_modules/isarray
+518 verbose tar unpack /Users/William_Koo/.npm/core-util-is/1.0.2/package.tgz
+519 verbose tar unpacking to /Users/William_Koo/Documents/nodeJS/express1223/node_modules/mongodb/node_modules/readable-stream/node_modules/core-util-is
+520 silly gentlyRm /Users/William_Koo/Documents/nodeJS/express1223/node_modules/mongodb/node_modules/readable-stream/node_modules/core-util-is is being purged
+521 verbose gentlyRm don't care about contents; nuking /Users/William_Koo/Documents/nodeJS/express1223/node_modules/mongodb/node_modules/readable-stream/node_modules/core-util-is
+522 silly gentlyRm /Users/William_Koo/Documents/nodeJS/express1223/node_modules/mongodb/node_modules/readable-stream/node_modules/string_decoder is being purged from base /Users/William_Koo/Documents/nodeJS/express1223
+523 verbose gentlyRm don't care about contents; nuking /Users/William_Koo/Documents/nodeJS/express1223/node_modules/mongodb/node_modules/readable-stream/node_modules/string_decoder
+524 verbose tar unpack /Users/William_Koo/.npm/isarray/0.0.1/package.tgz
+525 verbose tar unpacking to /Users/William_Koo/Documents/nodeJS/express1223/node_modules/mongodb/node_modules/readable-stream/node_modules/isarray
+526 silly gentlyRm /Users/William_Koo/Documents/nodeJS/express1223/node_modules/mongodb/node_modules/readable-stream/node_modules/isarray is being purged
+527 verbose gentlyRm don't care about contents; nuking /Users/William_Koo/Documents/nodeJS/express1223/node_modules/mongodb/node_modules/readable-stream/node_modules/isarray
+528 silly gentlyRm /Users/William_Koo/Documents/nodeJS/express1223/node_modules/mongodb/node_modules/readable-stream/node_modules/inherits is being purged from base /Users/William_Koo/Documents/nodeJS/express1223
+529 verbose gentlyRm don't care about contents; nuking /Users/William_Koo/Documents/nodeJS/express1223/node_modules/mongodb/node_modules/readable-stream/node_modules/inherits
+530 silly gunzTarPerm modes [ '755', '644' ]
+531 verbose tar unpack /Users/William_Koo/.npm/string_decoder/0.10.31/package.tgz
+532 verbose tar unpacking to /Users/William_Koo/Documents/nodeJS/express1223/node_modules/mongodb/node_modules/readable-stream/node_modules/string_decoder
+533 silly gentlyRm /Users/William_Koo/Documents/nodeJS/express1223/node_modules/mongodb/node_modules/readable-stream/node_modules/string_decoder is being purged
+534 verbose gentlyRm don't care about contents; nuking /Users/William_Koo/Documents/nodeJS/express1223/node_modules/mongodb/node_modules/readable-stream/node_modules/string_decoder
+535 silly gunzTarPerm modes [ '755', '644' ]
+536 verbose tar unpack /Users/William_Koo/.npm/inherits/2.0.1/package.tgz
+537 verbose tar unpacking to /Users/William_Koo/Documents/nodeJS/express1223/node_modules/mongodb/node_modules/readable-stream/node_modules/inherits
+538 silly gentlyRm /Users/William_Koo/Documents/nodeJS/express1223/node_modules/mongodb/node_modules/readable-stream/node_modules/inherits is being purged
+539 verbose gentlyRm don't care about contents; nuking /Users/William_Koo/Documents/nodeJS/express1223/node_modules/mongodb/node_modules/readable-stream/node_modules/inherits
+540 silly gunzTarPerm modes [ '755', '644' ]
+541 silly gunzTarPerm modes [ '755', '644' ]
+542 silly gunzTarPerm extractEntry package.json
+543 silly gunzTarPerm extractEntry package.json
+544 silly gunzTarPerm extractEntry package.json
+545 silly gunzTarPerm modified mode [ 'package.json', 436, 420 ]
+546 silly gunzTarPerm extractEntry README.md
+547 silly gunzTarPerm extractEntry LICENSE
+548 silly gunzTarPerm extractEntry package.json
+549 silly gunzTarPerm extractEntry README.md
+550 silly gunzTarPerm extractEntry index.js
+551 silly gunzTarPerm extractEntry .npmignore
+552 silly gunzTarPerm modified mode [ '.npmignore', 436, 420 ]
+553 silly gunzTarPerm extractEntry README.md
+554 silly gunzTarPerm modified mode [ 'README.md', 436, 420 ]
+555 silly gunzTarPerm extractEntry README.md
+556 silly gunzTarPerm extractEntry LICENSE
+557 silly gunzTarPerm extractEntry test.js
+558 silly gunzTarPerm extractEntry float.patch
+559 silly gunzTarPerm extractEntry build/build.js
+560 silly gunzTarPerm extractEntry component.json
+561 silly gunzTarPerm extractEntry LICENSE
+562 silly gunzTarPerm modified mode [ 'LICENSE', 436, 420 ]
+563 silly gunzTarPerm extractEntry index.js
+564 silly gunzTarPerm modified mode [ 'index.js', 436, 420 ]
+565 silly gunzTarPerm extractEntry inherits.js
+566 silly gunzTarPerm extractEntry inherits_browser.js
+567 silly gunzTarPerm extractEntry lib/util.js
+568 silly gunzTarPerm extractEntry test.js
+569 verbose write writing to /Users/William_Koo/Documents/nodeJS/express1223/node_modules/mongodb/node_modules/readable-stream/node_modules/core-util-is/package.json
+570 verbose write writing to /Users/William_Koo/Documents/nodeJS/express1223/node_modules/mongodb/node_modules/readable-stream/node_modules/isarray/package.json
+571 verbose write writing to /Users/William_Koo/Documents/nodeJS/express1223/node_modules/mongodb/node_modules/readable-stream/node_modules/string_decoder/package.json
+572 verbose write writing to /Users/William_Koo/Documents/nodeJS/express1223/node_modules/mongodb/node_modules/readable-stream/node_modules/inherits/package.json
+573 info preinstall core-util-is@1.0.2
+574 info preinstall isarray@0.0.1
+575 info preinstall string_decoder@0.10.31
+576 info preinstall inherits@2.0.1
+577 verbose readDependencies loading dependencies from /Users/William_Koo/Documents/nodeJS/express1223/node_modules/mongodb/node_modules/readable-stream/node_modules/core-util-is/package.json
+578 verbose readDependencies loading dependencies from /Users/William_Koo/Documents/nodeJS/express1223/node_modules/mongodb/node_modules/readable-stream/node_modules/isarray/package.json
+579 verbose readDependencies loading dependencies from /Users/William_Koo/Documents/nodeJS/express1223/node_modules/mongodb/node_modules/readable-stream/node_modules/string_decoder/package.json
+580 verbose readDependencies loading dependencies from /Users/William_Koo/Documents/nodeJS/express1223/node_modules/mongodb/node_modules/readable-stream/node_modules/inherits/package.json
+581 verbose readDependencies loading dependencies from /Users/William_Koo/Documents/nodeJS/express1223/node_modules/mongodb/node_modules/readable-stream/node_modules/core-util-is/package.json
+582 verbose readDependencies loading dependencies from /Users/William_Koo/Documents/nodeJS/express1223/node_modules/mongodb/node_modules/readable-stream/node_modules/isarray/package.json
+583 verbose readDependencies loading dependencies from /Users/William_Koo/Documents/nodeJS/express1223/node_modules/mongodb/node_modules/readable-stream/node_modules/string_decoder/package.json
+584 verbose readDependencies loading dependencies from /Users/William_Koo/Documents/nodeJS/express1223/node_modules/mongodb/node_modules/readable-stream/node_modules/inherits/package.json
+585 silly install resolved []
+586 verbose about to build /Users/William_Koo/Documents/nodeJS/express1223/node_modules/mongodb/node_modules/readable-stream/node_modules/core-util-is
+587 info build /Users/William_Koo/Documents/nodeJS/express1223/node_modules/mongodb/node_modules/readable-stream/node_modules/core-util-is
+588 silly install resolved []
+589 verbose about to build /Users/William_Koo/Documents/nodeJS/express1223/node_modules/mongodb/node_modules/readable-stream/node_modules/string_decoder
+590 info build /Users/William_Koo/Documents/nodeJS/express1223/node_modules/mongodb/node_modules/readable-stream/node_modules/string_decoder
+591 silly install resolved []
+592 verbose about to build /Users/William_Koo/Documents/nodeJS/express1223/node_modules/mongodb/node_modules/readable-stream/node_modules/isarray
+593 info build /Users/William_Koo/Documents/nodeJS/express1223/node_modules/mongodb/node_modules/readable-stream/node_modules/isarray
+594 silly install resolved []
+595 verbose about to build /Users/William_Koo/Documents/nodeJS/express1223/node_modules/mongodb/node_modules/readable-stream/node_modules/inherits
+596 info build /Users/William_Koo/Documents/nodeJS/express1223/node_modules/mongodb/node_modules/readable-stream/node_modules/inherits
+597 info linkStuff string_decoder@0.10.31
+598 silly linkStuff string_decoder@0.10.31 has /Users/William_Koo/Documents/nodeJS/express1223/node_modules/mongodb/node_modules/readable-stream/node_modules as its parent node_modules
+599 info linkStuff core-util-is@1.0.2
+600 silly linkStuff core-util-is@1.0.2 has /Users/William_Koo/Documents/nodeJS/express1223/node_modules/mongodb/node_modules/readable-stream/node_modules as its parent node_modules
+601 info linkStuff isarray@0.0.1
+602 silly linkStuff isarray@0.0.1 has /Users/William_Koo/Documents/nodeJS/express1223/node_modules/mongodb/node_modules/readable-stream/node_modules as its parent node_modules
+603 info linkStuff inherits@2.0.1
+604 silly linkStuff inherits@2.0.1 has /Users/William_Koo/Documents/nodeJS/express1223/node_modules/mongodb/node_modules/readable-stream/node_modules as its parent node_modules
+605 verbose linkBins string_decoder@0.10.31
+606 verbose linkMans string_decoder@0.10.31
+607 verbose rebuildBundles string_decoder@0.10.31
+608 verbose linkBins core-util-is@1.0.2
+609 verbose linkMans core-util-is@1.0.2
+610 verbose rebuildBundles core-util-is@1.0.2
+611 verbose linkBins isarray@0.0.1
+612 verbose linkMans isarray@0.0.1
+613 verbose rebuildBundles isarray@0.0.1
+614 verbose linkBins inherits@2.0.1
+615 verbose linkMans inherits@2.0.1
+616 verbose rebuildBundles inherits@2.0.1
+617 info install string_decoder@0.10.31
+618 info install core-util-is@1.0.2
+619 info install isarray@0.0.1
+620 info install inherits@2.0.1
+621 info postinstall string_decoder@0.10.31
+622 info postinstall core-util-is@1.0.2
+623 info postinstall isarray@0.0.1
+624 info postinstall inherits@2.0.1
+625 verbose unlock done using /Users/William_Koo/.npm/_locks/string-decoder-a3dfa80b6a62c2da.lock for /Users/William_Koo/Documents/nodeJS/express1223/node_modules/mongodb/node_modules/readable-stream/node_modules/string_decoder
+626 verbose unlock done using /Users/William_Koo/.npm/_locks/core-util-is-0a1e8ff2dc4713f4.lock for /Users/William_Koo/Documents/nodeJS/express1223/node_modules/mongodb/node_modules/readable-stream/node_modules/core-util-is
+627 verbose unlock done using /Users/William_Koo/.npm/_locks/isarray-1f1dacb73cc2386a.lock for /Users/William_Koo/Documents/nodeJS/express1223/node_modules/mongodb/node_modules/readable-stream/node_modules/isarray
+628 verbose unlock done using /Users/William_Koo/.npm/_locks/inherits-f6e757d76daf72c9.lock for /Users/William_Koo/Documents/nodeJS/express1223/node_modules/mongodb/node_modules/readable-stream/node_modules/inherits
+629 verbose about to build /Users/William_Koo/Documents/nodeJS/express1223/node_modules/mongodb/node_modules/readable-stream
+630 info build /Users/William_Koo/Documents/nodeJS/express1223/node_modules/mongodb/node_modules/readable-stream
+631 info linkStuff readable-stream@1.0.31
+632 silly linkStuff readable-stream@1.0.31 has /Users/William_Koo/Documents/nodeJS/express1223/node_modules/mongodb/node_modules as its parent node_modules
+633 verbose linkBins readable-stream@1.0.31
+634 verbose linkMans readable-stream@1.0.31
+635 verbose rebuildBundles readable-stream@1.0.31
+636 verbose rebuildBundles [ 'core-util-is', 'inherits', 'isarray', 'string_decoder' ]
+637 info install readable-stream@1.0.31
+638 info postinstall readable-stream@1.0.31
+639 verbose unlock done using /Users/William_Koo/.npm/_locks/readable-stream-d3612b30e1b98e45.lock for /Users/William_Koo/Documents/nodeJS/express1223/node_modules/mongodb/node_modules/readable-stream
+640 http 304 https://registry.npmjs.org/bson
+641 verbose headers { date: 'Tue, 05 Jan 2016 08:44:24 GMT',
+641 verbose headers   via: '1.1 varnish',
+641 verbose headers   'cache-control': 'max-age=300',
+641 verbose headers   etag: '"3JA7YUYKYJEJYJTYC81GGPDTG"',
+641 verbose headers   age: '256',
+641 verbose headers   connection: 'keep-alive',
+641 verbose headers   'x-served-by': 'cache-hkg6822-HKG',
+641 verbose headers   'x-cache': 'HIT',
+641 verbose headers   'x-cache-hits': '1',
+641 verbose headers   'x-timer': 'S1451983464.211693,VS0,VE0',
+641 verbose headers   vary: 'Accept' }
+642 silly get cb [ 304,
+642 silly get   { date: 'Tue, 05 Jan 2016 08:44:24 GMT',
+642 silly get     via: '1.1 varnish',
+642 silly get     'cache-control': 'max-age=300',
+642 silly get     etag: '"3JA7YUYKYJEJYJTYC81GGPDTG"',
+642 silly get     age: '256',
+642 silly get     connection: 'keep-alive',
+642 silly get     'x-served-by': 'cache-hkg6822-HKG',
+642 silly get     'x-cache': 'HIT',
+642 silly get     'x-cache-hits': '1',
+642 silly get     'x-timer': 'S1451983464.211693,VS0,VE0',
+642 silly get     vary: 'Accept' } ]
+643 verbose etag https://registry.npmjs.org/bson from cache
+644 verbose get saving bson to /Users/William_Koo/.npm/registry.npmjs.org/bson/.cache.json
+645 silly addNameRange number 2 { name: 'bson', range: '>=0.4.20 <0.5.0', hasData: true }
+646 silly addNameRange versions [ 'bson',
+646 silly addNameRange   [ '0.0.1',
+646 silly addNameRange     '0.0.2',
+646 silly addNameRange     '0.0.3',
+646 silly addNameRange     '0.0.4',
+646 silly addNameRange     '0.0.5',
+646 silly addNameRange     '0.0.6',
+646 silly addNameRange     '0.0.7',
+646 silly addNameRange     '0.0.8',
+646 silly addNameRange     '0.0.9',
+646 silly addNameRange     '0.1.0',
+646 silly addNameRange     '0.1.1',
+646 silly addNameRange     '0.1.3',
+646 silly addNameRange     '0.1.4',
+646 silly addNameRange     '0.1.5',
+646 silly addNameRange     '0.1.6',
+646 silly addNameRange     '0.1.7',
+646 silly addNameRange     '0.1.8',
+646 silly addNameRange     '0.1.9',
+646 silly addNameRange     '0.2.0',
+646 silly addNameRange     '0.2.1',
+646 silly addNameRange     '0.2.2',
+646 silly addNameRange     '0.2.3',
+646 silly addNameRange     '0.2.4',
+646 silly addNameRange     '0.2.5',
+646 silly addNameRange     '0.2.6',
+646 silly addNameRange     '0.2.7',
+646 silly addNameRange     '0.2.8',
+646 silly addNameRange     '0.2.9',
+646 silly addNameRange     '0.2.10',
+646 silly addNameRange     '0.2.11',
+646 silly addNameRange     '0.2.12',
+646 silly addNameRange     '0.2.13',
+646 silly addNameRange     '0.2.14',
+646 silly addNameRange     '0.2.15',
+646 silly addNameRange     '0.2.16',
+646 silly addNameRange     '0.2.17',
+646 silly addNameRange     '0.2.18',
+646 silly addNameRange     '0.2.19',
+646 silly addNameRange     '0.2.20',
+646 silly addNameRange     '0.2.21',
+646 silly addNameRange     '0.3.0',
+646 silly addNameRange     '0.3.1',
+646 silly addNameRange     '0.3.2',
+646 silly addNameRange     '0.4.0',
+646 silly addNameRange     '0.4.1',
+646 silly addNameRange     '0.4.2',
+646 silly addNameRange     '0.4.3',
+646 silly addNameRange     '0.4.4',
+646 silly addNameRange     '0.4.5',
+646 silly addNameRange     '0.4.6',
+646 silly addNameRange     '0.4.7',
+646 silly addNameRange     '0.4.8',
+646 silly addNameRange     '0.2.22',
+646 silly addNameRange     '0.4.10',
+646 silly addNameRange     '0.4.12',
+646 silly addNameRange     '0.4.13',
+646 silly addNameRange     '0.4.14',
+646 silly addNameRange     '0.4.15',
+646 silly addNameRange     '0.4.16',
+646 silly addNameRange     '0.4.17',
+646 silly addNameRange     '0.4.18',
+646 silly addNameRange     '0.4.19',
+646 silly addNameRange     '0.4.20' ] ]
+647 silly addNamed bson@0.4.20
+648 verbose addNamed "0.4.20" is a plain semver version for bson
+649 silly cache afterAdd bson@0.4.20
+650 verbose afterAdd /Users/William_Koo/.npm/bson/0.4.20/package/package.json not in flight; writing
+651 verbose afterAdd /Users/William_Koo/.npm/bson/0.4.20/package/package.json written
+652 silly install resolved [ { name: 'bson',
+652 silly install resolved     description: 'A bson parser for node.js and the browser',
+652 silly install resolved     keywords: [ 'mongodb', 'bson', 'parser' ],
+652 silly install resolved     version: '0.4.20',
+652 silly install resolved     author: { name: 'Christian Amor Kvalheim', email: 'christkv@gmail.com' },
+652 silly install resolved     contributors: [],
+652 silly install resolved     repository: { type: 'git', url: 'git://github.com/mongodb/js-bson.git' },
+652 silly install resolved     bugs: { url: 'https://github.com/mongodb/js-bson/issues' },
+652 silly install resolved     devDependencies:
+652 silly install resolved      { nodeunit: '0.9.0',
+652 silly install resolved        gleak: '0.2.3',
+652 silly install resolved        one: '2.X.X',
+652 silly install resolved        benchmark: '1.0.0',
+652 silly install resolved        colors: '1.1.0' },
+652 silly install resolved     config: { native: false },
+652 silly install resolved     main: './lib/bson/index',
+652 silly install resolved     directories: { lib: './lib/bson' },
+652 silly install resolved     engines: { node: '>=0.6.19' },
+652 silly install resolved     scripts: { test: 'nodeunit ./test/node' },
+652 silly install resolved     browser: 'lib/bson/bson.js',
+652 silly install resolved     license: 'Apache-2.0',
+652 silly install resolved     gitHead: '7a57dc553c82ff1754d04e85fbbbc45b1dbc24fe',
+652 silly install resolved     homepage: 'https://github.com/mongodb/js-bson',
+652 silly install resolved     _id: 'bson@0.4.20',
+652 silly install resolved     _shasum: '39b7fa42ef49378f71f40cbc165e46b41c2ff79e',
+652 silly install resolved     _from: 'bson@>=0.4.20 <0.5.0',
+652 silly install resolved     _npmVersion: '2.14.7',
+652 silly install resolved     _nodeVersion: '4.2.2',
+652 silly install resolved     _npmUser: { name: 'christkv', email: 'christkv@gmail.com' },
+652 silly install resolved     maintainers: [ [Object], [Object] ],
+652 silly install resolved     dist:
+652 silly install resolved      { shasum: '39b7fa42ef49378f71f40cbc165e46b41c2ff79e',
+652 silly install resolved        tarball: 'http://registry.npmjs.org/bson/-/bson-0.4.20.tgz' },
+652 silly install resolved     _resolved: 'https://registry.npmjs.org/bson/-/bson-0.4.20.tgz',
+652 silly install resolved     readme: 'ERROR: No README data found!' } ]
+653 info install bson@0.4.20 into /Users/William_Koo/Documents/nodeJS/express1223/node_modules/mongodb/node_modules/mongodb-core
+654 info installOne bson@0.4.20
+655 verbose installOne of bson to /Users/William_Koo/Documents/nodeJS/express1223/node_modules/mongodb/node_modules/mongodb-core not in flight; installing
+656 verbose lock using /Users/William_Koo/.npm/_locks/bson-7007587050b8f245.lock for /Users/William_Koo/Documents/nodeJS/express1223/node_modules/mongodb/node_modules/mongodb-core/node_modules/bson
+657 silly install write writing bson 0.4.20 to /Users/William_Koo/Documents/nodeJS/express1223/node_modules/mongodb/node_modules/mongodb-core/node_modules/bson
+658 verbose unbuild node_modules/mongodb/node_modules/mongodb-core/node_modules/bson
+659 silly gentlyRm /Users/William_Koo/Documents/nodeJS/express1223/node_modules/mongodb/node_modules/mongodb-core/node_modules/bson is being purged from base /Users/William_Koo/Documents/nodeJS/express1223
+660 verbose gentlyRm don't care about contents; nuking /Users/William_Koo/Documents/nodeJS/express1223/node_modules/mongodb/node_modules/mongodb-core/node_modules/bson
+661 verbose tar unpack /Users/William_Koo/.npm/bson/0.4.20/package.tgz
+662 verbose tar unpacking to /Users/William_Koo/Documents/nodeJS/express1223/node_modules/mongodb/node_modules/mongodb-core/node_modules/bson
+663 silly gentlyRm /Users/William_Koo/Documents/nodeJS/express1223/node_modules/mongodb/node_modules/mongodb-core/node_modules/bson is being purged
+664 verbose gentlyRm don't care about contents; nuking /Users/William_Koo/Documents/nodeJS/express1223/node_modules/mongodb/node_modules/mongodb-core/node_modules/bson
+665 silly gunzTarPerm modes [ '755', '644' ]
+666 silly gunzTarPerm extractEntry package.json
+667 silly gunzTarPerm extractEntry README.md
+668 silly gunzTarPerm extractEntry LICENSE
+669 silly gunzTarPerm extractEntry alternate_parsers/bson.js
+670 silly gunzTarPerm extractEntry alternate_parsers/faster_bson.js
+671 silly gunzTarPerm extractEntry HISTORY
+672 silly gunzTarPerm extractEntry bower.json
+673 silly gunzTarPerm extractEntry browser_build/package.json
+674 silly gunzTarPerm extractEntry browser_build/bson.js
+675 silly gunzTarPerm extractEntry lib/bson/binary.js
+676 silly gunzTarPerm extractEntry lib/bson/db_ref.js
+677 silly gunzTarPerm extractEntry lib/bson/double.js
+678 silly gunzTarPerm extractEntry lib/bson/float_parser.js
+679 silly gunzTarPerm extractEntry lib/bson/index.js
+680 silly gunzTarPerm extractEntry lib/bson/code.js
+681 silly gunzTarPerm extractEntry lib/bson/map.js
+682 silly gunzTarPerm extractEntry lib/bson/max_key.js
+683 silly gunzTarPerm extractEntry lib/bson/min_key.js
+684 silly gunzTarPerm extractEntry lib/bson/objectid.js
+685 silly gunzTarPerm extractEntry lib/bson/symbol.js
+686 silly gunzTarPerm extractEntry lib/bson/bson.js
+687 silly gunzTarPerm extractEntry lib/bson/regexp.js
+688 silly gunzTarPerm extractEntry lib/bson/binary_parser.js
+689 silly gunzTarPerm extractEntry lib/bson/timestamp.js
+690 silly gunzTarPerm extractEntry lib/bson/long.js
+691 silly gunzTarPerm extractEntry lib/bson/parser/calculate_size.js
+692 silly gunzTarPerm extractEntry lib/bson/parser/deserializer.js
+693 silly gunzTarPerm extractEntry lib/bson/parser/serializer.js
+694 silly gunzTarPerm extractEntry tools/gleak.js
+695 verbose write writing to /Users/William_Koo/Documents/nodeJS/express1223/node_modules/mongodb/node_modules/mongodb-core/node_modules/bson/package.json
+696 info preinstall bson@0.4.20
+697 verbose readDependencies loading dependencies from /Users/William_Koo/Documents/nodeJS/express1223/node_modules/mongodb/node_modules/mongodb-core/node_modules/bson/package.json
+698 verbose readDependencies loading dependencies from /Users/William_Koo/Documents/nodeJS/express1223/node_modules/mongodb/node_modules/mongodb-core/node_modules/bson/package.json
+699 silly install resolved []
+700 verbose about to build /Users/William_Koo/Documents/nodeJS/express1223/node_modules/mongodb/node_modules/mongodb-core/node_modules/bson
+701 info build /Users/William_Koo/Documents/nodeJS/express1223/node_modules/mongodb/node_modules/mongodb-core/node_modules/bson
+702 info linkStuff bson@0.4.20
+703 silly linkStuff bson@0.4.20 has /Users/William_Koo/Documents/nodeJS/express1223/node_modules/mongodb/node_modules/mongodb-core/node_modules as its parent node_modules
+704 verbose linkBins bson@0.4.20
+705 verbose linkMans bson@0.4.20
+706 verbose rebuildBundles bson@0.4.20
+707 info install bson@0.4.20
+708 info postinstall bson@0.4.20
+709 verbose unlock done using /Users/William_Koo/.npm/_locks/bson-7007587050b8f245.lock for /Users/William_Koo/Documents/nodeJS/express1223/node_modules/mongodb/node_modules/mongodb-core/node_modules/bson
+710 verbose about to build /Users/William_Koo/Documents/nodeJS/express1223/node_modules/mongodb/node_modules/mongodb-core
+711 info build /Users/William_Koo/Documents/nodeJS/express1223/node_modules/mongodb/node_modules/mongodb-core
+712 info linkStuff mongodb-core@1.2.31
+713 silly linkStuff mongodb-core@1.2.31 has /Users/William_Koo/Documents/nodeJS/express1223/node_modules/mongodb/node_modules as its parent node_modules
+714 verbose linkBins mongodb-core@1.2.31
+715 verbose linkMans mongodb-core@1.2.31
+716 verbose rebuildBundles mongodb-core@1.2.31
+717 verbose rebuildBundles [ 'bson' ]
+718 info install mongodb-core@1.2.31
+719 info postinstall mongodb-core@1.2.31
+720 verbose readDependencies loading dependencies from /Users/William_Koo/Documents/nodeJS/express1223/node_modules/mongodb/package.json
+721 verbose targetResolver reading package data from /Users/William_Koo/Documents/nodeJS/express1223/node_modules/mongodb/node_modules/es6-promise/package.json
+722 verbose targetResolver reading package data from /Users/William_Koo/Documents/nodeJS/express1223/node_modules/mongodb/node_modules/mongodb-core/package.json
+723 verbose targetResolver reading package data from /Users/William_Koo/Documents/nodeJS/express1223/node_modules/mongodb/node_modules/readable-stream/package.json
+724 silly cache add args [ 'kerberos@~0.0', null ]
+725 verbose cache add spec kerberos@~0.0
+726 silly cache add parsed spec Result {
+726 silly cache add   raw: 'kerberos@~0.0',
+726 silly cache add   scope: null,
+726 silly cache add   name: 'kerberos',
+726 silly cache add   rawSpec: '~0.0',
+726 silly cache add   spec: '>=0.0.0 <0.1.0',
+726 silly cache add   type: 'range' }
+727 silly addNamed kerberos@>=0.0.0 <0.1.0
+728 verbose addNamed ">=0.0.0 <0.1.0" is a valid semver range for kerberos
+729 silly addNameRange { name: 'kerberos', range: '>=0.0.0 <0.1.0', hasData: false }
+730 silly mapToRegistry name kerberos
+731 silly mapToRegistry using default registry
+732 silly mapToRegistry registry https://registry.npmjs.org/
+733 silly mapToRegistry uri https://registry.npmjs.org/kerberos
+734 verbose addNameRange registry:https://registry.npmjs.org/kerberos not in flight; fetching
+735 verbose request uri https://registry.npmjs.org/kerberos
+736 verbose request no auth needed
+737 info attempt registry request try #1 at 4:44:23 PM
+738 verbose etag "6VFVMR0KMOGBW4WYXSP9LEM3"
+739 http request GET https://registry.npmjs.org/kerberos
+740 http 304 https://registry.npmjs.org/kerberos
+741 verbose headers { date: 'Tue, 05 Jan 2016 08:44:24 GMT',
+741 verbose headers   via: '1.1 varnish',
+741 verbose headers   'cache-control': 'max-age=300',
+741 verbose headers   etag: '"6VFVMR0KMOGBW4WYXSP9LEM3"',
+741 verbose headers   age: '213',
+741 verbose headers   connection: 'keep-alive',
+741 verbose headers   'x-served-by': 'cache-hkg6820-HKG',
+741 verbose headers   'x-cache': 'HIT',
+741 verbose headers   'x-cache-hits': '2',
+741 verbose headers   'x-timer': 'S1451983464.841891,VS0,VE0',
+741 verbose headers   vary: 'Accept' }
+742 silly get cb [ 304,
+742 silly get   { date: 'Tue, 05 Jan 2016 08:44:24 GMT',
+742 silly get     via: '1.1 varnish',
+742 silly get     'cache-control': 'max-age=300',
+742 silly get     etag: '"6VFVMR0KMOGBW4WYXSP9LEM3"',
+742 silly get     age: '213',
+742 silly get     connection: 'keep-alive',
+742 silly get     'x-served-by': 'cache-hkg6820-HKG',
+742 silly get     'x-cache': 'HIT',
+742 silly get     'x-cache-hits': '2',
+742 silly get     'x-timer': 'S1451983464.841891,VS0,VE0',
+742 silly get     vary: 'Accept' } ]
+743 verbose etag https://registry.npmjs.org/kerberos from cache
+744 verbose get saving kerberos to /Users/William_Koo/.npm/registry.npmjs.org/kerberos/.cache.json
+745 silly addNameRange number 2 { name: 'kerberos', range: '>=0.0.0 <0.1.0', hasData: true }
+746 silly addNameRange versions [ 'kerberos',
+746 silly addNameRange   [ '0.0.1',
+746 silly addNameRange     '0.0.2',
+746 silly addNameRange     '0.0.3',
+746 silly addNameRange     '0.0.4',
+746 silly addNameRange     '0.0.5',
+746 silly addNameRange     '0.0.6',
+746 silly addNameRange     '0.0.7',
+746 silly addNameRange     '0.0.8',
+746 silly addNameRange     '0.0.9',
+746 silly addNameRange     '0.0.10',
+746 silly addNameRange     '0.0.11',
+746 silly addNameRange     '0.0.12',
+746 silly addNameRange     '0.0.14',
+746 silly addNameRange     '0.0.15',
+746 silly addNameRange     '0.0.16',
+746 silly addNameRange     '0.0.17' ] ]
+747 silly addNamed kerberos@0.0.17
+748 verbose addNamed "0.0.17" is a plain semver version for kerberos
+749 silly cache afterAdd kerberos@0.0.17
+750 verbose afterAdd /Users/William_Koo/.npm/kerberos/0.0.17/package/package.json not in flight; writing
+751 verbose afterAdd /Users/William_Koo/.npm/kerberos/0.0.17/package/package.json written
+752 silly install resolved [ { name: 'kerberos',
+752 silly install resolved     version: '0.0.17',
+752 silly install resolved     description: 'Kerberos library for Node.js',
+752 silly install resolved     main: 'index.js',
+752 silly install resolved     repository:
+752 silly install resolved      { type: 'git',
+752 silly install resolved        url: 'git+https://github.com/christkv/kerberos.git' },
+752 silly install resolved     keywords: [ 'kerberos', 'security', 'authentication' ],
+752 silly install resolved     dependencies: { nan: '~2.0' },
+752 silly install resolved     devDependencies: { nodeunit: 'latest' },
+752 silly install resolved     scripts:
+752 silly install resolved      { install: '(node-gyp rebuild) || (exit 0)',
+752 silly install resolved        test: 'nodeunit ./test' },
+752 silly install resolved     author: { name: 'Christian Amor Kvalheim' },
+752 silly install resolved     license: 'Apache 2.0',
+752 silly install resolved     gitHead: '035be2e4619d7f3d7ea5103da1f60a6045ef8d7c',
+752 silly install resolved     bugs: { url: 'https://github.com/christkv/kerberos/issues' },
+752 silly install resolved     homepage: 'https://github.com/christkv/kerberos',
+752 silly install resolved     _id: 'kerberos@0.0.17',
+752 silly install resolved     _shasum: '29a67c0b127bfa52bdd3b53b7b8c8659a9a084f8',
+752 silly install resolved     _from: 'kerberos@>=0.0.0 <0.1.0',
+752 silly install resolved     _npmVersion: '2.14.7',
+752 silly install resolved     _nodeVersion: '4.2.1',
+752 silly install resolved     _npmUser: { name: 'christkv', email: 'christkv@gmail.com' },
+752 silly install resolved     maintainers: [ [Object] ],
+752 silly install resolved     dist:
+752 silly install resolved      { shasum: '29a67c0b127bfa52bdd3b53b7b8c8659a9a084f8',
+752 silly install resolved        tarball: 'http://registry.npmjs.org/kerberos/-/kerberos-0.0.17.tgz' },
+752 silly install resolved     directories: {},
+752 silly install resolved     _resolved: 'https://registry.npmjs.org/kerberos/-/kerberos-0.0.17.tgz',
+752 silly install resolved     readme: 'ERROR: No README data found!' } ]
+753 info install kerberos@0.0.17 into /Users/William_Koo/Documents/nodeJS/express1223/node_modules/mongodb
+754 info installOne kerberos@0.0.17
+755 verbose installOne of kerberos to /Users/William_Koo/Documents/nodeJS/express1223/node_modules/mongodb not in flight; installing
+756 verbose lock using /Users/William_Koo/.npm/_locks/kerberos-54857f92604cd74c.lock for /Users/William_Koo/Documents/nodeJS/express1223/node_modules/mongodb/node_modules/kerberos
+757 silly install write writing kerberos 0.0.17 to /Users/William_Koo/Documents/nodeJS/express1223/node_modules/mongodb/node_modules/kerberos
+758 verbose unbuild node_modules/mongodb/node_modules/kerberos
+759 silly gentlyRm /Users/William_Koo/Documents/nodeJS/express1223/node_modules/mongodb/node_modules/kerberos is being purged from base /Users/William_Koo/Documents/nodeJS/express1223
+760 verbose gentlyRm don't care about contents; nuking /Users/William_Koo/Documents/nodeJS/express1223/node_modules/mongodb/node_modules/kerberos
+761 verbose tar unpack /Users/William_Koo/.npm/kerberos/0.0.17/package.tgz
+762 verbose tar unpacking to /Users/William_Koo/Documents/nodeJS/express1223/node_modules/mongodb/node_modules/kerberos
+763 silly gentlyRm /Users/William_Koo/Documents/nodeJS/express1223/node_modules/mongodb/node_modules/kerberos is being purged
+764 verbose gentlyRm don't care about contents; nuking /Users/William_Koo/Documents/nodeJS/express1223/node_modules/mongodb/node_modules/kerberos
+765 silly gunzTarPerm modes [ '755', '644' ]
+766 silly gunzTarPerm extractEntry package.json
+767 silly gunzTarPerm extractEntry README.md
+768 silly gunzTarPerm extractEntry LICENSE
+769 silly gunzTarPerm extractEntry index.js
+770 silly gunzTarPerm extractEntry binding.gyp
+771 silly gunzTarPerm extractEntry .travis.yml
+772 silly gunzTarPerm extractEntry builderror.log
+773 silly gunzTarPerm extractEntry HISTORY.md
+774 silly gunzTarPerm extractEntry lib/kerberos.js
+775 silly gunzTarPerm extractEntry lib/sspi.js
+776 silly gunzTarPerm extractEntry lib/kerberos_context.h
+777 silly gunzTarPerm extractEntry lib/kerberos.cc
+778 silly gunzTarPerm extractEntry lib/kerberos.h
+779 silly gunzTarPerm extractEntry lib/auth_processes/mongodb.js
+780 silly gunzTarPerm extractEntry lib/kerberos_context.cc
+781 silly gunzTarPerm extractEntry lib/base64.c
+782 silly gunzTarPerm extractEntry lib/kerberosgss.c
+783 silly gunzTarPerm extractEntry lib/kerberosgss.h
+784 silly gunzTarPerm extractEntry lib/base64.h
+785 silly gunzTarPerm extractEntry lib/win32/base64.c
+786 silly gunzTarPerm extractEntry lib/win32/base64.h
+787 silly gunzTarPerm extractEntry lib/win32/kerberos.cc
+788 silly gunzTarPerm extractEntry lib/win32/kerberos.h
+789 silly gunzTarPerm extractEntry lib/win32/kerberos_sspi.c
+790 silly gunzTarPerm extractEntry lib/win32/kerberos_sspi.h
+791 silly gunzTarPerm extractEntry lib/win32/worker.cc
+792 silly gunzTarPerm extractEntry lib/win32/worker.h
+793 silly gunzTarPerm extractEntry lib/win32/wrappers/security_credentials.js
+794 silly gunzTarPerm extractEntry lib/win32/wrappers/security_buffer.js
+795 silly gunzTarPerm extractEntry lib/win32/wrappers/security_buffer_descriptor.js
+796 silly gunzTarPerm extractEntry lib/win32/wrappers/security_context.js
+797 silly gunzTarPerm extractEntry lib/win32/wrappers/security_buffer_descriptor.h
+798 silly gunzTarPerm extractEntry lib/win32/wrappers/security_buffer.cc
+799 silly gunzTarPerm extractEntry lib/win32/wrappers/security_buffer.h
+800 silly gunzTarPerm extractEntry lib/win32/wrappers/security_context.h
+801 silly gunzTarPerm extractEntry lib/win32/wrappers/security_buffer_descriptor.cc
+802 silly gunzTarPerm extractEntry lib/win32/wrappers/security_credentials.cc
+803 silly gunzTarPerm extractEntry lib/win32/wrappers/security_credentials.h
+804 silly gunzTarPerm extractEntry lib/win32/wrappers/security_context.cc
+805 silly gunzTarPerm extractEntry lib/worker.cc
+806 silly gunzTarPerm extractEntry lib/worker.h
+807 silly gunzTarPerm extractEntry test/kerberos_tests.js
+808 silly gunzTarPerm extractEntry test/kerberos_win32_test.js
+809 silly gunzTarPerm extractEntry test/win32/security_buffer_descriptor_tests.js
+810 silly gunzTarPerm extractEntry test/win32/security_buffer_tests.js
+811 silly gunzTarPerm extractEntry test/win32/security_credentials_tests.js
+812 verbose write writing to /Users/William_Koo/Documents/nodeJS/express1223/node_modules/mongodb/node_modules/kerberos/package.json
+813 info preinstall kerberos@0.0.17
+814 verbose readDependencies loading dependencies from /Users/William_Koo/Documents/nodeJS/express1223/node_modules/mongodb/node_modules/kerberos/package.json
+815 silly prepareForInstallMany adding nan@~2.0 from kerberos dependencies
+816 verbose readDependencies loading dependencies from /Users/William_Koo/Documents/nodeJS/express1223/node_modules/mongodb/node_modules/kerberos/package.json
+817 silly cache add args [ 'nan@~2.0', null ]
+818 verbose cache add spec nan@~2.0
+819 silly cache add parsed spec Result {
+819 silly cache add   raw: 'nan@~2.0',
+819 silly cache add   scope: null,
+819 silly cache add   name: 'nan',
+819 silly cache add   rawSpec: '~2.0',
+819 silly cache add   spec: '>=2.0.0 <2.1.0',
+819 silly cache add   type: 'range' }
+820 silly addNamed nan@>=2.0.0 <2.1.0
+821 verbose addNamed ">=2.0.0 <2.1.0" is a valid semver range for nan
+822 silly addNameRange { name: 'nan', range: '>=2.0.0 <2.1.0', hasData: false }
+823 silly mapToRegistry name nan
+824 silly mapToRegistry using default registry
+825 silly mapToRegistry registry https://registry.npmjs.org/
+826 silly mapToRegistry uri https://registry.npmjs.org/nan
+827 verbose addNameRange registry:https://registry.npmjs.org/nan not in flight; fetching
+828 verbose request uri https://registry.npmjs.org/nan
+829 verbose request no auth needed
+830 info attempt registry request try #1 at 4:44:23 PM
+831 verbose etag "7CEDVJA24M9BXRU7SU6WRSW4M"
+832 http request GET https://registry.npmjs.org/nan
+833 http 304 https://registry.npmjs.org/nan
+834 verbose headers { date: 'Tue, 05 Jan 2016 08:44:25 GMT',
+834 verbose headers   via: '1.1 varnish',
+834 verbose headers   'cache-control': 'max-age=300',
+834 verbose headers   etag: '"7CEDVJA24M9BXRU7SU6WRSW4M"',
+834 verbose headers   age: '107',
+834 verbose headers   connection: 'keep-alive',
+834 verbose headers   'x-served-by': 'cache-hkg6827-HKG',
+834 verbose headers   'x-cache': 'HIT',
+834 verbose headers   'x-cache-hits': '4',
+834 verbose headers   'x-timer': 'S1451983465.511031,VS0,VE0',
+834 verbose headers   vary: 'Accept' }
+835 silly get cb [ 304,
+835 silly get   { date: 'Tue, 05 Jan 2016 08:44:25 GMT',
+835 silly get     via: '1.1 varnish',
+835 silly get     'cache-control': 'max-age=300',
+835 silly get     etag: '"7CEDVJA24M9BXRU7SU6WRSW4M"',
+835 silly get     age: '107',
+835 silly get     connection: 'keep-alive',
+835 silly get     'x-served-by': 'cache-hkg6827-HKG',
+835 silly get     'x-cache': 'HIT',
+835 silly get     'x-cache-hits': '4',
+835 silly get     'x-timer': 'S1451983465.511031,VS0,VE0',
+835 silly get     vary: 'Accept' } ]
+836 verbose etag https://registry.npmjs.org/nan from cache
+837 verbose get saving nan to /Users/William_Koo/.npm/registry.npmjs.org/nan/.cache.json
+838 silly addNameRange number 2 { name: 'nan', range: '>=2.0.0 <2.1.0', hasData: true }
+839 silly addNameRange versions [ 'nan',
+839 silly addNameRange   [ '0.3.0-wip',
+839 silly addNameRange     '0.3.0-wip2',
+839 silly addNameRange     '0.3.0',
+839 silly addNameRange     '0.3.1',
+839 silly addNameRange     '0.3.2',
+839 silly addNameRange     '0.4.0',
+839 silly addNameRange     '0.4.1',
+839 silly addNameRange     '0.4.2',
+839 silly addNameRange     '0.4.3',
+839 silly addNameRange     '0.4.4',
+839 silly addNameRange     '0.5.0',
+839 silly addNameRange     '0.5.1',
+839 silly addNameRange     '0.5.2',
+839 silly addNameRange     '0.6.0',
+839 silly addNameRange     '0.7.0',
+839 silly addNameRange     '0.7.1',
+839 silly addNameRange     '0.8.0',
+839 silly addNameRange     '1.0.0',
+839 silly addNameRange     '1.1.0',
+839 silly addNameRange     '1.1.1',
+839 silly addNameRange     '1.1.2',
+839 silly addNameRange     '1.2.0',
+839 silly addNameRange     '1.3.0',
+839 silly addNameRange     '1.4.0',
+839 silly addNameRange     '1.4.1',
+839 silly addNameRange     '1.5.0',
+839 silly addNameRange     '1.4.2',
+839 silly addNameRange     '1.4.3',
+839 silly addNameRange     '1.5.1',
+839 silly addNameRange     '1.5.2',
+839 silly addNameRange     '1.6.0',
+839 silly addNameRange     '1.5.3',
+839 silly addNameRange     '1.6.1',
+839 silly addNameRange     '1.6.2',
+839 silly addNameRange     '1.7.0',
+839 silly addNameRange     '1.8.0',
+839 silly addNameRange     '1.8.1',
+839 silly addNameRange     '1.8.2',
+839 silly addNameRange     '1.8.3',
+839 silly addNameRange     '1.8.4',
+839 silly addNameRange     '1.9.0',
+839 silly addNameRange     '2.0.0',
+839 silly addNameRange     '2.0.1',
+839 silly addNameRange     '2.0.2',
+839 silly addNameRange     '2.0.3',
+839 silly addNameRange     '2.0.4',
+839 silly addNameRange     '2.0.5',
+839 silly addNameRange     '2.0.6',
+839 silly addNameRange     '2.0.7',
+839 silly addNameRange     '2.0.8',
+839 silly addNameRange     '2.0.9',
+839 silly addNameRange     '2.1.0' ] ]
+840 silly addNamed nan@2.0.9
+841 verbose addNamed "2.0.9" is a plain semver version for nan
+842 silly cache afterAdd nan@2.0.9
+843 verbose afterAdd /Users/William_Koo/.npm/nan/2.0.9/package/package.json not in flight; writing
+844 verbose afterAdd /Users/William_Koo/.npm/nan/2.0.9/package/package.json written
+845 silly install resolved [ { name: 'nan',
+845 silly install resolved     version: '2.0.9',
+845 silly install resolved     description: 'Native Abstractions for Node.js: C++ header for Node 0.8 -> 4 compatibility',
+845 silly install resolved     main: 'include_dirs.js',
+845 silly install resolved     repository: { type: 'git', url: 'git://github.com/nodejs/nan.git' },
+845 silly install resolved     scripts:
+845 silly install resolved      { test: 'tap --gc test/js/*-test.js',
+845 silly install resolved        'rebuild-tests': 'pangyp rebuild --msvs_version=2013 --directory test',
+845 silly install resolved        docs: 'doc/.build.sh' },
+845 silly install resolved     contributors:
+845 silly install resolved      [ [Object],
+845 silly install resolved        [Object],
+845 silly install resolved        [Object],
+845 silly install resolved        [Object],
+845 silly install resolved        [Object],
+845 silly install resolved        [Object],
+845 silly install resolved        [Object] ],
+845 silly install resolved     devDependencies:
+845 silly install resolved      { bindings: '~1.2.1',
+845 silly install resolved        commander: '^2.8.1',
+845 silly install resolved        glob: '^5.0.14',
+845 silly install resolved        'node-gyp': '~2.0.2',
+845 silly install resolved        pangyp: '~2.2.0',
+845 silly install resolved        tap: '~0.7.1',
+845 silly install resolved        xtend: '~4.0.0' },
+845 silly install resolved     license: 'MIT',
+845 silly install resolved     bugs: { url: 'https://github.com/nodejs/nan/issues' },
+845 silly install resolved     homepage: 'https://github.com/nodejs/nan#readme',
+845 silly install resolved     _id: 'nan@2.0.9',
+845 silly install resolved     _shasum: 'd02a770f46778842cceb94e17cab31ffc7234a05',
+845 silly install resolved     _resolved: 'https://registry.npmjs.org/nan/-/nan-2.0.9.tgz',
+845 silly install resolved     _from: 'nan@>=2.0.0 <2.1.0',
+845 silly install resolved     _npmVersion: '2.14.2',
+845 silly install resolved     _nodeVersion: '4.0.0',
+845 silly install resolved     _npmUser: { name: 'kkoopa', email: 'bbyholm@abo.fi' },
+845 silly install resolved     maintainers: [ [Object], [Object] ],
+845 silly install resolved     dist:
+845 silly install resolved      { shasum: 'd02a770f46778842cceb94e17cab31ffc7234a05',
+845 silly install resolved        tarball: 'http://registry.npmjs.org/nan/-/nan-2.0.9.tgz' },
+845 silly install resolved     directories: {},
+845 silly install resolved     readme: 'ERROR: No README data found!' } ]
+846 info install nan@2.0.9 into /Users/William_Koo/Documents/nodeJS/express1223/node_modules/mongodb/node_modules/kerberos
+847 info installOne nan@2.0.9
+848 verbose installOne of nan to /Users/William_Koo/Documents/nodeJS/express1223/node_modules/mongodb/node_modules/kerberos not in flight; installing
+849 verbose lock using /Users/William_Koo/.npm/_locks/nan-4f799caf68a7211b.lock for /Users/William_Koo/Documents/nodeJS/express1223/node_modules/mongodb/node_modules/kerberos/node_modules/nan
+850 silly install write writing nan 2.0.9 to /Users/William_Koo/Documents/nodeJS/express1223/node_modules/mongodb/node_modules/kerberos/node_modules/nan
+851 verbose unbuild node_modules/mongodb/node_modules/kerberos/node_modules/nan
+852 silly gentlyRm /Users/William_Koo/Documents/nodeJS/express1223/node_modules/mongodb/node_modules/kerberos/node_modules/nan is being purged from base /Users/William_Koo/Documents/nodeJS/express1223
+853 verbose gentlyRm don't care about contents; nuking /Users/William_Koo/Documents/nodeJS/express1223/node_modules/mongodb/node_modules/kerberos/node_modules/nan
+854 verbose tar unpack /Users/William_Koo/.npm/nan/2.0.9/package.tgz
+855 verbose tar unpacking to /Users/William_Koo/Documents/nodeJS/express1223/node_modules/mongodb/node_modules/kerberos/node_modules/nan
+856 silly gentlyRm /Users/William_Koo/Documents/nodeJS/express1223/node_modules/mongodb/node_modules/kerberos/node_modules/nan is being purged
+857 verbose gentlyRm don't care about contents; nuking /Users/William_Koo/Documents/nodeJS/express1223/node_modules/mongodb/node_modules/kerberos/node_modules/nan
+858 silly gunzTarPerm modes [ '755', '644' ]
+859 silly gunzTarPerm extractEntry package.json
+860 silly gunzTarPerm modified mode [ 'package.json', 436, 420 ]
+861 silly gunzTarPerm extractEntry README.md
+862 silly gunzTarPerm modified mode [ 'README.md', 436, 420 ]
+863 silly gunzTarPerm extractEntry include_dirs.js
+864 silly gunzTarPerm modified mode [ 'include_dirs.js', 436, 420 ]
+865 silly gunzTarPerm extractEntry nan_converters.h
+866 silly gunzTarPerm modified mode [ 'nan_converters.h', 436, 420 ]
+867 silly gunzTarPerm extractEntry LICENSE.md
+868 silly gunzTarPerm modified mode [ 'LICENSE.md', 436, 420 ]
+869 silly gunzTarPerm extractEntry .dntrc
+870 silly gunzTarPerm modified mode [ '.dntrc', 436, 420 ]
+871 silly gunzTarPerm extractEntry appveyor.yml
+872 silly gunzTarPerm modified mode [ 'appveyor.yml', 436, 420 ]
+873 silly gunzTarPerm extractEntry doc/new.md
+874 silly gunzTarPerm modified mode [ 'doc/new.md', 436, 420 ]
+875 silly gunzTarPerm extractEntry doc/.build.sh
+876 silly gunzTarPerm modified mode [ 'doc/.build.sh', 509, 493 ]
+877 silly gunzTarPerm extractEntry doc/buffers.md
+878 silly gunzTarPerm modified mode [ 'doc/buffers.md', 436, 420 ]
+879 silly gunzTarPerm extractEntry doc/callback.md
+880 silly gunzTarPerm modified mode [ 'doc/callback.md', 436, 420 ]
+881 silly gunzTarPerm extractEntry doc/converters.md
+882 silly gunzTarPerm modified mode [ 'doc/converters.md', 436, 420 ]
+883 silly gunzTarPerm extractEntry doc/errors.md
+884 silly gunzTarPerm modified mode [ 'doc/errors.md', 436, 420 ]
+885 silly gunzTarPerm extractEntry doc/maybe_types.md
+886 silly gunzTarPerm modified mode [ 'doc/maybe_types.md', 436, 420 ]
+887 silly gunzTarPerm extractEntry doc/methods.md
+888 silly gunzTarPerm modified mode [ 'doc/methods.md', 436, 420 ]
+889 silly gunzTarPerm extractEntry doc/asyncworker.md
+890 silly gunzTarPerm modified mode [ 'doc/asyncworker.md', 436, 420 ]
+891 silly gunzTarPerm extractEntry doc/node_misc.md
+892 silly gunzTarPerm modified mode [ 'doc/node_misc.md', 436, 420 ]
+893 silly gunzTarPerm extractEntry doc/persistent.md
+894 silly gunzTarPerm modified mode [ 'doc/persistent.md', 436, 420 ]
+895 silly gunzTarPerm extractEntry doc/scopes.md
+896 silly gunzTarPerm modified mode [ 'doc/scopes.md', 436, 420 ]
+897 silly gunzTarPerm extractEntry doc/script.md
+898 silly gunzTarPerm modified mode [ 'doc/script.md', 436, 420 ]
+899 silly gunzTarPerm extractEntry doc/string_bytes.md
+900 silly gunzTarPerm modified mode [ 'doc/string_bytes.md', 436, 420 ]
+901 silly gunzTarPerm extractEntry doc/v8_internals.md
+902 silly gunzTarPerm modified mode [ 'doc/v8_internals.md', 436, 420 ]
+903 silly gunzTarPerm extractEntry doc/v8_misc.md
+904 silly gunzTarPerm modified mode [ 'doc/v8_misc.md', 436, 420 ]
+905 silly gunzTarPerm extractEntry nan.h
+906 silly gunzTarPerm modified mode [ 'nan.h', 436, 420 ]
+907 silly gunzTarPerm extractEntry nan_callbacks.h
+908 silly gunzTarPerm modified mode [ 'nan_callbacks.h', 436, 420 ]
+909 silly gunzTarPerm extractEntry nan_callbacks_12_inl.h
+910 silly gunzTarPerm modified mode [ 'nan_callbacks_12_inl.h', 436, 420 ]
+911 silly gunzTarPerm extractEntry nan_callbacks_pre_12_inl.h
+912 silly gunzTarPerm modified mode [ 'nan_callbacks_pre_12_inl.h', 436, 420 ]
+913 silly gunzTarPerm extractEntry nan_converters_43_inl.h
+914 silly gunzTarPerm modified mode [ 'nan_converters_43_inl.h', 436, 420 ]
+915 silly gunzTarPerm extractEntry nan_converters_pre_43_inl.h
+916 silly gunzTarPerm modified mode [ 'nan_converters_pre_43_inl.h', 436, 420 ]
+917 silly gunzTarPerm extractEntry nan_implementation_12_inl.h
+918 silly gunzTarPerm modified mode [ 'nan_implementation_12_inl.h', 436, 420 ]
+919 silly gunzTarPerm extractEntry nan_implementation_pre_12_inl.h
+920 silly gunzTarPerm modified mode [ 'nan_implementation_pre_12_inl.h', 436, 420 ]
+921 silly gunzTarPerm extractEntry nan_maybe_43_inl.h
+922 silly gunzTarPerm modified mode [ 'nan_maybe_43_inl.h', 436, 420 ]
+923 silly gunzTarPerm extractEntry nan_maybe_pre_43_inl.h
+924 silly gunzTarPerm modified mode [ 'nan_maybe_pre_43_inl.h', 436, 420 ]
+925 silly gunzTarPerm extractEntry nan_new.h
+926 silly gunzTarPerm modified mode [ 'nan_new.h', 436, 420 ]
+927 silly gunzTarPerm extractEntry nan_object_wrap.h
+928 silly gunzTarPerm modified mode [ 'nan_object_wrap.h', 436, 420 ]
+929 silly gunzTarPerm extractEntry nan_persistent_12_inl.h
+930 silly gunzTarPerm modified mode [ 'nan_persistent_12_inl.h', 436, 420 ]
+931 silly gunzTarPerm extractEntry nan_persistent_pre_12_inl.h
+932 silly gunzTarPerm modified mode [ 'nan_persistent_pre_12_inl.h', 436, 420 ]
+933 silly gunzTarPerm extractEntry nan_string_bytes.h
+934 silly gunzTarPerm modified mode [ 'nan_string_bytes.h', 436, 420 ]
+935 silly gunzTarPerm extractEntry nan_weak.h
+936 silly gunzTarPerm modified mode [ 'nan_weak.h', 436, 420 ]
+937 silly gunzTarPerm extractEntry CHANGELOG.md
+938 silly gunzTarPerm modified mode [ 'CHANGELOG.md', 436, 420 ]
+939 silly gunzTarPerm extractEntry tools/package.json
+940 silly gunzTarPerm modified mode [ 'tools/package.json', 436, 420 ]
+941 silly gunzTarPerm extractEntry tools/README.md
+942 silly gunzTarPerm modified mode [ 'tools/README.md', 436, 420 ]
+943 silly gunzTarPerm extractEntry tools/1to2.js
+944 silly gunzTarPerm modified mode [ 'tools/1to2.js', 509, 493 ]
+945 verbose write writing to /Users/William_Koo/Documents/nodeJS/express1223/node_modules/mongodb/node_modules/kerberos/node_modules/nan/package.json
+946 info preinstall nan@2.0.9
+947 verbose readDependencies loading dependencies from /Users/William_Koo/Documents/nodeJS/express1223/node_modules/mongodb/node_modules/kerberos/node_modules/nan/package.json
+948 verbose readDependencies loading dependencies from /Users/William_Koo/Documents/nodeJS/express1223/node_modules/mongodb/node_modules/kerberos/node_modules/nan/package.json
+949 silly install resolved []
+950 verbose about to build /Users/William_Koo/Documents/nodeJS/express1223/node_modules/mongodb/node_modules/kerberos/node_modules/nan
+951 info build /Users/William_Koo/Documents/nodeJS/express1223/node_modules/mongodb/node_modules/kerberos/node_modules/nan
+952 info linkStuff nan@2.0.9
+953 silly linkStuff nan@2.0.9 has /Users/William_Koo/Documents/nodeJS/express1223/node_modules/mongodb/node_modules/kerberos/node_modules as its parent node_modules
+954 verbose linkBins nan@2.0.9
+955 verbose linkMans nan@2.0.9
+956 verbose rebuildBundles nan@2.0.9
+957 info install nan@2.0.9
+958 info postinstall nan@2.0.9
+959 verbose unlock done using /Users/William_Koo/.npm/_locks/nan-4f799caf68a7211b.lock for /Users/William_Koo/Documents/nodeJS/express1223/node_modules/mongodb/node_modules/kerberos/node_modules/nan
+960 verbose about to build /Users/William_Koo/Documents/nodeJS/express1223/node_modules/mongodb/node_modules/kerberos
+961 info build /Users/William_Koo/Documents/nodeJS/express1223/node_modules/mongodb/node_modules/kerberos
+962 info linkStuff kerberos@0.0.17
+963 silly linkStuff kerberos@0.0.17 has /Users/William_Koo/Documents/nodeJS/express1223/node_modules/mongodb/node_modules as its parent node_modules
+964 verbose linkBins kerberos@0.0.17
+965 verbose linkMans kerberos@0.0.17
+966 verbose rebuildBundles kerberos@0.0.17
+967 verbose rebuildBundles [ 'nan' ]
+968 info install kerberos@0.0.17
+969 verbose unsafe-perm in lifecycle true
+970 info postinstall kerberos@0.0.17
+971 verbose unlock done using /Users/William_Koo/.npm/_locks/kerberos-54857f92604cd74c.lock for /Users/William_Koo/Documents/nodeJS/express1223/node_modules/mongodb/node_modules/kerberos
+972 verbose unlock done using /Users/William_Koo/.npm/_locks/mongodb-core-004df88a5667d767.lock for /Users/William_Koo/Documents/nodeJS/express1223/node_modules/mongodb/node_modules/mongodb-core
+973 verbose about to build /Users/William_Koo/Documents/nodeJS/express1223/node_modules/mongodb
+974 info build /Users/William_Koo/Documents/nodeJS/express1223/node_modules/mongodb
+975 info linkStuff mongodb@2.1.3
+976 silly linkStuff mongodb@2.1.3 has /Users/William_Koo/Documents/nodeJS/express1223/node_modules as its parent node_modules
+977 verbose linkBins mongodb@2.1.3
+978 verbose linkMans mongodb@2.1.3
+979 verbose rebuildBundles mongodb@2.1.3
+980 verbose rebuildBundles [ 'es6-promise', 'kerberos', 'mongodb-core', 'readable-stream' ]
+981 info install mongodb@2.1.3
+982 info postinstall mongodb@2.1.3
+983 verbose unlock done using /Users/William_Koo/.npm/_locks/mongodb-2bf219e1359e7e2e.lock for /Users/William_Koo/Documents/nodeJS/express1223/node_modules/mongodb
+984 verbose validateInstall loading /Users/William_Koo/Documents/nodeJS/express1223/package.json for validation
+985 verbose stack Error: The package connect@3.4.0 does not satisfy its siblings' peerDependencies requirements!
+985 verbose stack     at /usr/local/lib/node_modules/npm/lib/install.js:125:32
+985 verbose stack     at /usr/local/lib/node_modules/npm/lib/install.js:268:7
+985 verbose stack     at /usr/local/lib/node_modules/npm/node_modules/read-installed/read-installed.js:142:5
+985 verbose stack     at /usr/local/lib/node_modules/npm/node_modules/read-installed/read-installed.js:263:14
+985 verbose stack     at cb (/usr/local/lib/node_modules/npm/node_modules/slide/lib/async-map.js:47:24)
+985 verbose stack     at /usr/local/lib/node_modules/npm/node_modules/read-installed/read-installed.js:263:14
+985 verbose stack     at cb (/usr/local/lib/node_modules/npm/node_modules/slide/lib/async-map.js:47:24)
+985 verbose stack     at /usr/local/lib/node_modules/npm/node_modules/read-installed/read-installed.js:263:14
+985 verbose stack     at cb (/usr/local/lib/node_modules/npm/node_modules/slide/lib/async-map.js:47:24)
+985 verbose stack     at /usr/local/lib/node_modules/npm/node_modules/read-installed/read-installed.js:263:14
+986 verbose cwd /Users/William_Koo/Documents/nodeJS/express1223
+987 error Darwin 15.2.0
+988 error argv "/usr/local/bin/node" "/usr/local/bin/npm" "install" "--save" "mongodb"
+989 error node v4.2.3
+990 error npm  v2.14.7
+991 error code EPEERINVALID
+992 error peerinvalid The package connect@3.4.0 does not satisfy its siblings' peerDependencies requirements!
+992 error peerinvalid Peer session-mongoose@0.5.2 wants connect@^2.0
+993 verbose exit [ 1, true ]
