@@ -3,7 +3,8 @@ module.exports = function(grunt){
 	[	'grunt-cafe-mocha',
 		'grunt-contrib-jshint',
 		'grunt-exec',
-		'grunt-contrib-uglify'
+		'grunt-contrib-uglify',
+		'grunt-contrib-less'
 	].forEach(function(task){
 		grunt.loadNpmTasks(task);
 	});
@@ -28,6 +29,13 @@ module.exports = function(grunt){
 			build:{
 				src:'public/js/main.js',
 				dest:'bulid/<%-pkg.name%>-<%-pkg.version%>.js.min.js'
+			}
+		},
+		less:{
+			development:{
+				files:{
+					'public/css/main.css':'less/main.less',
+				}
 			}
 		}
 	});	

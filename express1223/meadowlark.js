@@ -4,18 +4,20 @@ var http = require('http'),
 	formidable = require('formidable'),
 	favicon = require('serve-favicon'),
 	fs = require('fs'),
+	mongoose = require('mongoose'),
 	credentials = require('./credentials.js'),
 	requiresWaiver = require('./lib/requiresWaiver.js'),
 	cartValidation=require('./lib/cartValidation.js'),
 	Vacation = require('./models/vacation.js'),
-	VacationInSeasonListener = require('./models/vacationInSeasonListener.js');
+	VacationInSeasonListener = require('./models/vacationInSeasonListener.js'),
+	Attraction=require('./models/attraction.js');
 
 //var emailService = require('./lib/email.js')(credentials);
 //emailService.send('gujun@liba.com','Hood river tours on sale today!','Get \`em while they\`re hot!')
 var app = express();
-
-
 app.use(favicon(__dirname + '/public/favicon.ico'));
+
+
 
 // set up handlebars view engine
 var handlebars = require('express3-handlebars').create({
@@ -25,11 +27,13 @@ var handlebars = require('express3-handlebars').create({
             if(!this._sections) this._sections = {};
             this._sections[name] = options.fn(this);
             return null;
-        }
+        },
+		static:function(name){
+			return require('./lib/static.js').map(name);
+		}
     }
 });
 
-var mongoose = require('mongoose');
 var options = {
 	server: {
 		socketOptions: { keepAlive: 1 }
@@ -94,6 +98,21 @@ Vacation.find(function(err, vacations){
 		notes: 'The tour guide is currently recovering from a skiing accident.',
 	}).save();
 });
+
+// create "admin" subdomain...this should appear
+// before all your other routes
+var admin = express.Router();
+app.use(require('vhost')('admin.*', admin));
+
+// create admin routes; these can be defined anywhere
+admin.get('/', function(req, res){
+	res.render('admin/home');
+});
+admin.get('/users', function(req, res){
+	res.render('admin/users');
+});
+
+
 
 
 switch(app.get('env')){
@@ -359,6 +378,30 @@ app.post('/cart/checkout',function(req,res){
 	})
 	res.render('cart-thank-you',{cart:cart})
 })
+app.get('/vacations', function(req, res){
+	Vacation.find({ available: true }, function(err, vacations){
+		var currency = req.session.currency || 'USD';
+		var context = {
+			currency: currency,
+			vacations: vacations.map(function(vacation){
+				return {
+					sku: vacation.sku,
+					name: vacation.name,
+					description: vacation.description,
+					inSeason: vacation.inSeason,
+					price: convertFromUSD(vacation.priceInCents/100, currency),
+					qty: vacation.qty,
+				};
+			})
+		};
+		switch(currency){
+			case 'USD': context.currencyUSD = 'selected'; break;
+			case 'GBP': context.currencyGBP = 'selected'; break;
+			case 'BTC': context.currencyBTC = 'selected'; break;
+		}
+		res.render('vacations', context);
+	});
+});
 
 app.get('/notify-me-when-in-season', function(req, res){
 	res.render('notify-me-when-in-season', { sku: req.query.sku });
@@ -423,6 +466,31 @@ app.get('/vacations', function(req, res){
 			case 'BTC': context.currencyBTC = 'selected'; break;
 		}
 		res.render('vacations', context);
+	});
+});
+
+app.get('/cart/add', function(req, res, next){
+	var cart = req.session.cart || (req.session.cart = { items: [] });
+	Vacation.findOne({ sku: req.query.sku }, function(err, vacation){
+		if(err) return next(err);
+		if(!vacation) return next(new Error('Unknown vacation SKU: ' + req.query.sku));
+		cart.items.push({
+			vacation: vacation,
+			guests: req.body.guests || 1,
+		});
+		res.redirect(303, '/cart');
+	});
+});
+app.post('/cart/add', function(req, res, next){
+	var cart = req.session.cart || (req.session.cart = { items: [] });
+	Vacation.findOne({ sku: req.body.sku }, function(err, vacation){
+		if(err) return next(err);
+		if(!vacation) return next(new Error('Unknown vacation SKU: ' + req.body.sku));
+		cart.items.push({
+			vacation: vacation,
+			guests: req.body.guests || 1,
+		});
+		res.redirect(303, '/cart');
 	});
 });
 
