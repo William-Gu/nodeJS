@@ -37,7 +37,9 @@
         <![endif]-->
 
 		<header>
-            <img src="{{static '/img/logo.png'}}" alt="Meadowlark Travel Logo">
+            static:<img src="{{static '/img/logo.png'}}" alt="Meadowlark Travel Logo">
+            logoImage:<img src="{{logoImage}}" alt="Meadowlark Travel Logo">
+            <img src="" alt="" class="cartIcon"/>
         </header>
 	    <div class="container">
 			{{#if flash}}
@@ -76,5 +78,13 @@
 
         <script src="/vendor/bootstrap/js/bootstrap.min.js"></script>
         <script src="/js/main.js"></script>
+        <script>
+            var IMG_CART_EMPTY='{{static '/img/shop/cart_empty.png'}}';
+            var IMG_CART_FULL='{{static '/img/shop/cart_full.png'}}';
+            $(document).on('meadowlark_cart_changed',function(){
+                  $('header img.cartIcon').attr('src',cart.isEmpty()?IMG_CART_EMPTY:IMG_CART_FULL);
+              }
+            );
+        </script>
     </body>
 </html>

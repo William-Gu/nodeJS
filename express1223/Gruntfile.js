@@ -33,6 +33,13 @@ module.exports = function(grunt){
 		},
 		less:{
 			development:{
+				options:{
+					customFunctions:{
+						static:function(lessObject,name){
+							return 'url("'+require('./lib/static.js').map(name.value)+'")';
+						}
+					}
+				},
 				files:{
 					'public/css/main.css':'less/main.less',
 				}
