@@ -5,19 +5,17 @@ var http = require('http'),
 	favicon = require('serve-favicon'),
 	fs = require('fs'),
 	mongoose = require('mongoose'),
-	credentials = require('./credentials.js'),
-	requiresWaiver = require('./lib/requiresWaiver.js'),
-	cartValidation=require('./lib/cartValidation.js'),
 	Vacation = require('./models/vacation.js'),
 	VacationInSeasonListener = require('./models/vacationInSeasonListener.js'),
-	Attraction=require('./models/attraction.js');
+	Attraction=require('./models/attraction.js'),
+	credentials = require('./credentials.js'),
+	cartValidation=require('./lib/cartValidation.js'),
+	static=require('./lib/static.js');
 
 //var emailService = require('./lib/email.js')(credentials);
 //emailService.send('gujun@liba.com','Hood river tours on sale today!','Get \`em while they\`re hot!')
 var app = express();
 app.use(favicon(__dirname + '/public/favicon.ico'));
-
-
 
 // set up handlebars view engine
 var handlebars = require('express3-handlebars').create({
@@ -28,17 +26,46 @@ var handlebars = require('express3-handlebars').create({
             this._sections[name] = options.fn(this);
             return null;
         },
+		//{{static '/img/logo.png'}}
 		static:function(name){
-			return require('./lib/static.js').map(name);
+			return static.map(name);
 		}
     }
 });
 
-var options = {
-	server: {
-		socketOptions: { keepAlive: 1 }
-	}
-};
+app.engine('handlebars', handlebars.engine);
+app.set('view engine', 'handlebars');
+app.set('port', process.env.PORT || 3000);
+
+app.use(function(req, res, next){
+	var domain = require('domain').create();
+	domain.on('error', function(err){
+		console.error('DOMAIN ERROR CAUGHT\n', err.stack);
+		try {
+			setTimeout(function(){
+				console.error('Failsafe shutdown.');
+				process.exit(1);
+			}, 5000);
+			var worker = require('cluster').worker;
+			if(worker) worker.disconnect();
+			server.close();
+
+			try {
+				next(err);
+			} catch(error){
+				console.error('Express error mechanism failed.\n', error.stack);
+				res.statusCode = 500;
+				res.setHeader('content-type', 'text/plain');
+				res.end('Server error.');
+			}
+		} catch(error){
+			console.error('Unable to send 500 response.\n', error.stack);
+		}
+	});
+	domain.add(req);
+	domain.add(res);
+	domain.run(next);
+});
 switch(app.get('env')){
 	case 'development':
 		mongoose.connect(credentials.mongo.development.connectionString, options);
@@ -49,6 +76,29 @@ switch(app.get('env')){
 	default:
 		throw new Error('Unknown execution environment: ' + app.get('env'));
 }
+
+app.use(express.static(__dirname + '/public'));
+app.use(require('body-parser')());
+app.use(require('express-session')({
+	saveUninitialized: false,
+	secret: credentials.cookieSecret,
+}));
+
+//{{logoImage}}
+app.use(function(req, res, next){
+	var now = new Date();
+	res.locals.logoImage = now.getMonth()==0 && now.getDate()==7 ?
+		static.map('/img/logo_bud_clark.png') :
+		static.map('/img/logo.png');
+	next();
+});
+
+var options = {
+	server: {
+		socketOptions: { keepAlive: 1 }
+	}
+};
+
 
 // initialize vacations
 Vacation.find(function(err, vacations){
@@ -99,77 +149,6 @@ Vacation.find(function(err, vacations){
 	}).save();
 });
 
-// create "admin" subdomain...this should appear
-// before all your other routes
-var admin = express.Router();
-app.use(require('vhost')('admin.*', admin));
-
-// create admin routes; these can be defined anywhere
-admin.get('/', function(req, res){
-	res.render('admin/home');
-});
-admin.get('/users', function(req, res){
-	res.render('admin/users');
-});
-
-
-
-
-switch(app.get('env')){
-	case 'development':
-		// compact, colorful dev logging
-		app.use(require('morgan')('dev'));
-		break;
-	case 'production':
-		// module 'express-logger' supports daily log rotation
-		app.use(require('express-logger')({ path: __dirname + '/log/requests.log'}));
-		break;
-};
-
-
-app.engine('handlebars', handlebars.engine);
-app.set('view engine', 'handlebars');
-app.set('port', process.env.PORT || 3000);
-
-app.use(function(req, res, next){
-	var domain = require('domain').create();
-	domain.on('error', function(err){
-		console.error('DOMAIN ERROR CAUGHT\n', err.stack);
-		try {
-			setTimeout(function(){
-				console.error('Failsafe shutdown.');
-				process.exit(1);
-			}, 5000);
-			var worker = require('cluster').worker;
-			if(worker) worker.disconnect();
-			server.close();
-
-			try {
-				next(err);
-			} catch(error){
-				console.error('Express error mechanism failed.\n', error.stack);
-				res.statusCode = 500;
-				res.setHeader('content-type', 'text/plain');
-				res.end('Server error.');
-			}
-		} catch(error){
-			console.error('Unable to send 500 response.\n', error.stack);
-		}
-	});
-	domain.add(req);
-	domain.add(res);
-	domain.run(next);
-});
-
-app.use(require('express-session')({
-    saveUninitialized: false,
-    secret: credentials.cookieSecret,
-}));
-
-
-app.use(express.static(__dirname + '/public'));
-app.use(require('body-parser')());
-
 // flash message middleware
 app.use(function(req, res, next){
 	// if there's a flash message, transfer
@@ -186,32 +165,56 @@ app.use(function(req, res, next){
 	next();
 });
 
-app.use(requiresWaiver);
-app.use(cartValidation.checkWaivers);
-app.use(cartValidation.checkGuestCounts);
+// create "admin" subdomain...this should appear
+// before all your other routes
+var admin = express.Router();
+app.use(require('vhost')('admin.*', admin));
+
+
+// create admin routes; these can be defined anywhere
+admin.get('/', function(req, res){
+	res.render('admin/home');
+});
+admin.get('/users', function(req, res){
+	res.render('admin/users');
+});
+
+
+switch(app.get('env')){
+	case 'development':
+		// compact, colorful dev logging
+		app.use(require('morgan')('dev'));
+		break;
+	case 'production':
+		// module 'express-logger' supports daily log rotation
+		app.use(require('express-logger')({ path: __dirname + '/log/requests.log'}));
+		break;
+};
+
+
 
 // mocked weather data
 function getWeatherData(){
-    return {
-        locations: [
-            {	name: 'Portland',
-                forecastUrl: 'http://www.wunderground.com/US/OR/Portland.html',
-                iconUrl: 'http://icons-ak.wxug.com/i/c/k/cloudy.gif',
-                weather: 'Overcast',
-                temp: '54.1 F (12.3 C)',
+	return {
+		locations: [
+			{	name: 'Portland',
+				forecastUrl: 'http://www.wunderground.com/US/OR/Portland.html',
+				iconUrl: 'http://icons-ak.wxug.com/i/c/k/cloudy.gif',
+				weather: 'Overcast',
+				temp: '54.1 F (12.3 C)',
 			},{	name: 'Bend',
-                forecastUrl: 'http://www.wunderground.com/US/OR/Bend.html',
-                iconUrl: 'http://icons-ak.wxug.com/i/c/k/partlycloudy.gif',
-                weather: 'Partly Cloudy',
-                temp: '55.0 F (12.8 C)',
-            },{	name: 'Manzanita',
-                forecastUrl: 'http://www.wunderground.com/US/OR/Manzanita.html',
-                iconUrl: 'http://icons-ak.wxug.com/i/c/k/rain.gif',
-                weather: 'Light Rain',
-                temp: '55.0 F (12.8 C)',
-            },
-        ],
-    };
+				forecastUrl: 'http://www.wunderground.com/US/OR/Bend.html',
+				iconUrl: 'http://icons-ak.wxug.com/i/c/k/partlycloudy.gif',
+				weather: 'Partly Cloudy',
+				temp: '55.0 F (12.8 C)',
+			},{	name: 'Manzanita',
+				forecastUrl: 'http://www.wunderground.com/US/OR/Manzanita.html',
+				iconUrl: 'http://icons-ak.wxug.com/i/c/k/rain.gif',
+				weather: 'Light Rain',
+				temp: '55.0 F (12.8 C)',
+			},
+		],
+	};
 }
 
 // middleware to add weather data to context
@@ -352,32 +355,27 @@ app.post('/contest/vacation-photo/:year/:month', function(req, res){
 //        res.redirect(303, '/thank-you');
 //    });
 //});
-app.post('/cart/checkout',function(req,res){
-	var cart=req.session.cart;
-	if(!cart){next(new Error('Cart does not exist.'))}
-	var name=req.body.name||'',emial=req.body.email||""
-	if(!email.match(VALID_EMAIL_REGEX)){
-		return  req.next(new Error('Invalid email address.'))
+
+
+app.get('/vacation/:vacation', function(req, res, next){
+	Vacation.findOne({ slug: req.params.vacation }, function(err, vacation){
+		if(err) return next(err);
+		if(!vacation) return next();
+		res.render('vacation', { vacation: vacation });
+	});
+});
+
+function convertFromUSD(value, currency){
+	switch(currency){
+		case 'USD': return value * 1;
+		case 'GBP': return value * 0.6;
+		case 'BTC': return value * 0.0023707918444761;
+		default: return NaN;
 	}
-	cart.number=Math.random().toString().replace(/^0\.0*/,'')
-	cart.billing={
-		name:name,
-		email:email
-	}
-	res.render('email/cart-thank-you',{layout:null,cart:cart},function(err,html){
-		if(err){console.log('error in email temlate')}
-		mailTransport.sendMail({
-			from:'"william":gujun@liba.com',
-			to:cart.billing.email,
-			subject:'Thank you for Book your trip with me.',
-			html:html,
-			generateTextFromHtml:true
-		},function(err){
-			if(err){console.error('Unable to send confirmation:'+err.stack)}
-		})
-	})
-	res.render('cart-thank-you',{cart:cart})
-})
+}
+//app.use(cartValidation.checkWaivers);
+//app.use(cartValidation.checkGuestCounts);
+
 app.get('/vacations', function(req, res){
 	Vacation.find({ available: true }, function(err, vacations){
 		var currency = req.session.currency || 'USD';
@@ -401,6 +399,97 @@ app.get('/vacations', function(req, res){
 		}
 		res.render('vacations', context);
 	});
+});
+
+
+
+app.post('/vacations', function(req, res){
+	Vacation.findOne({ sku: req.body.purchaseSku }, function(err, vacation){
+		if(err || !vacation) {
+			req.session.flash = {
+				type: 'warning',
+				intro: 'Ooops!',
+				message: 'Something went wrong with your reservation; ' +
+				'please <a href="/contact">contact us</a>.',
+			};
+			return res.redirect(303, '/vacations');
+		}
+		vacation.packagesSold++;
+		vacation.save();
+		req.session.flash = {
+			type: 'success',
+			intro: 'Thank you!',
+			message: 'Your vacation has been booked.',
+		};
+		res.redirect(303, '/vacations');
+	});
+});
+
+
+app.get('/cart/add', function(req, res, next){
+	var cart = req.session.cart || (req.session.cart = { items: [] });
+	Vacation.findOne({ sku: req.query.sku }, function(err, vacation){
+		if(err) return next(err);
+		if(!vacation) return next(new Error('Unknown vacation SKU: ' + req.query.sku));
+		cart.items.push({
+			vacation: vacation,
+			guests: req.body.guests || 1,
+		});
+		res.redirect(303, '/cart');
+	});
+});
+app.post('/cart/add', function(req, res, next){
+	var cart = req.session.cart || (req.session.cart = { items: [] });
+	Vacation.findOne({ sku: req.body.sku }, function(err, vacation){
+		if(err) return next(err);
+		if(!vacation) return next(new Error('Unknown vacation SKU: ' + req.body.sku));
+		cart.items.push({
+			vacation: vacation,
+			guests: req.body.guests || 1,
+		});
+		res.redirect(303, '/cart');
+	});
+});
+app.get('/cart', function(req,res,next){
+	var cart = req.session.cart;
+	cart.some=function(){console.log("ss")}
+	console.log(cart)
+	if(!cart) next();
+	res.render('cart', { cart: cart });
+	//res.render('cart');
+});
+app.get('/cart/checkout', function(req, res, next){
+	var cart = req.session.cart;
+	if(!cart) next();
+	res.render('cart-checkout');
+});
+app.get('/cart/thank-you', function(req, res){
+	res.render('cart-thank-you', { cart: req.session.cart });
+});
+app.get('/email/cart/thank-you', function(req, res){
+	res.render('email/cart-thank-you', { cart: req.session.cart, layout: null });
+});
+app.post('/cart/checkout', function(req, res){
+	var cart = req.session.cart;
+	if(!cart) next(new Error('Cart does not exist.'));
+	var name = req.body.name || '', email = req.body.email || '';
+	// input validation
+	if(!email.match(VALID_EMAIL_REGEX)) return res.next(new Error('Invalid email address.'));
+	// assign a random cart ID; normally we would use a database ID here
+	cart.number = Math.random().toString().replace(/^0\.0*/, '');
+	cart.billing = {
+		name: name,
+		email: email,
+	};
+	res.render('email/cart-thank-you',
+		{ layout: null, cart: cart }, function(err,html){
+			if( err ) console.log('error in email template');
+			emailService.send(cart.billing.email,
+				'Thank you for booking your trip with Meadowlark Travel!',
+				html);
+		}
+	);
+	res.render('cart-thank-you', { cart: cart });
 });
 
 app.get('/notify-me-when-in-season', function(req, res){
@@ -436,63 +525,70 @@ app.get('/set-currency/:currency', function(req,res){
 	req.session.currency = req.params.currency;
 	return res.redirect(303, '/vacations');
 });
-function convertFromUSD(value, currency){
-	switch(currency){
-		case 'USD': return value * 1;
-		case 'GBP': return value * 0.6;
-		case 'BTC': return value * 0.0023707918444761;
-		default: return NaN;
-	}
-}
-app.get('/vacations', function(req, res){
-	Vacation.find({ available: true }, function(err, vacations){
-		var currency = req.session.currency || 'USD';
-		var context = {
-			currency: currency,
-			vacations: vacations.map(function(vacation){
-				return {
-					sku: vacation.sku,
-					name: vacation.name,
-					description: vacation.description,
-					inSeason: vacation.inSeason,
-					price: convertFromUSD(vacation.priceInCents/100, currency),
-					qty: vacation.qty,
-				};
-			})
-		};
-		switch(currency){
-			case 'USD': context.currencyUSD = 'selected'; break;
-			case 'GBP': context.currencyGBP = 'selected'; break;
-			case 'BTC': context.currencyBTC = 'selected'; break;
-		}
-		res.render('vacations', context);
+
+
+var rest = require('connect-rest');
+
+rest.get('/attractions', function(req, content, cb){
+	Attraction.find({ approved: true }, function(err, attractions){
+		if(err) return cb({ error: 'Internal error.' });
+		cb(null, attractions.map(function(a){
+			return {
+				name: a.name,
+				description: a.description,
+				location: a.location,
+			};
+		}));
 	});
 });
 
-app.get('/cart/add', function(req, res, next){
-	var cart = req.session.cart || (req.session.cart = { items: [] });
-	Vacation.findOne({ sku: req.query.sku }, function(err, vacation){
-		if(err) return next(err);
-		if(!vacation) return next(new Error('Unknown vacation SKU: ' + req.query.sku));
-		cart.items.push({
-			vacation: vacation,
-			guests: req.body.guests || 1,
-		});
-		res.redirect(303, '/cart');
+rest.post('/attraction', function(req, content, cb){
+	var a = new Attraction({
+		name: req.body.name,
+		description: req.body.description,
+		location: { lat: req.body.lat, lng: req.body.lng },
+		history: {
+			event: 'created',
+			email: req.body.email,
+			date: new Date(),
+		},
+		approved: false,
+	});
+	a.save(function(err, a){
+		if(err) return cb({ error: 'Unable to add attraction.' });
+		cb(null, { id: a._id });
 	});
 });
-app.post('/cart/add', function(req, res, next){
-	var cart = req.session.cart || (req.session.cart = { items: [] });
-	Vacation.findOne({ sku: req.body.sku }, function(err, vacation){
-		if(err) return next(err);
-		if(!vacation) return next(new Error('Unknown vacation SKU: ' + req.body.sku));
-		cart.items.push({
-			vacation: vacation,
-			guests: req.body.guests || 1,
+
+rest.get('/attraction/:id', function(req, content, cb){
+	Attraction.findById(req.params.id, function(err, a){
+		if(err) return cb({ error: 'Unable to retrieve attraction.' });
+		cb(null, {
+			name: a.name,
+			description: a.description,
+			location: a.location,
 		});
-		res.redirect(303, '/cart');
 	});
 });
+
+// API configuration
+var apiOptions = {
+	context: '/',
+	domain: require('domain').create(),
+};
+app.use(vhost('api.*',rest.rester(apiOptions)));
+
+apiOptions.domain.on('error', function(err){
+	console.log('API domain error.\n', err.stack);
+	setTimeout(function(){
+		console.log('Server shutting down after API domain error.');
+		process.exit(1);
+	}, 5000);
+	server.close();
+	var worker = require('cluster').worker;
+	if(worker) worker.disconnect();
+});
+
 
 app.get('/fail',function(req,res){
 	throw new Error('Nope!');
