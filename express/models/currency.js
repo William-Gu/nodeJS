@@ -10,4 +10,4 @@ exports.Can2US=function(can){
 };
 exports.US2Can=function(us){
     return round2(us/canDollar);
-}
+};

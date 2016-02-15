@@ -1,0 +1,45 @@
+
+//1.基本串行
+setTimeout(function(){
+    console.log('1');
+    setTimeout(function(){
+        console.log('2');
+        setTimeout(function(){
+            console.log('3');
+        },100)
+    },500)
+},1000);
+
+//2.nimble模块
+var flow=require('nimble');
+flow.series([
+    function(callback){
+        flow.parallel([
+            function(callback){
+                console.log("1111")
+            },
+            function(callback){
+                console.log("2222")
+            }
+        ]);
+        callback();
+    },
+    function(callback){
+        setTimeout(function(){
+            console.log('11');
+            callback();
+        },1000)
+    },
+    function(callback){
+        setTimeout(function(){
+            console.log('22');
+            callback();
+        },1000)
+    },
+    function(callback){
+        setTimeout(function(){
+            console.log('33');
+            callback();
+        },1000)
+    }
+]);

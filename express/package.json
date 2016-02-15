@@ -1,0 +1,12 @@
+{
+  "name": "WilliamTest",
+  "version": "0.0.0",
+  "description": "William`s node Web.",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/William_Koo/nodeJS.git"
+  },
+  "author": "William Koo <gujungujun@qq.com>",
+  "main":"index.js"
+}
